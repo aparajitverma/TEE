@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# executables and installers
+*.exe
+*.msi
+*.dmg
+
+# documents and certificates
+*.pdf
+certificateOfIEC.pdf
+
+# batch files
+commit.bat
