@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { name: 'Home', href: '/' },
+  { name: 'Dashboard', href: '/admin/dashboard' },
   { 
     name: 'About', 
     href: '/about',
@@ -87,12 +88,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-8 py-3 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] transition-all duration-300 hover:shadow-[0_12px_48px_0_rgba(0,0,0,0.45)]">
           
           {/* Logo - Tilted E */}
-          <Link href="/" className="flex items-center">
+          <Link href="/admin/dashboard" className="flex items-center group">
             <div className="relative w-10 h-10 flex items-center justify-center">
-              <span className="text-3xl font-bold text-white transform -rotate-12 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] hover:rotate-0 transition-transform duration-300 cursor-pointer">
+              <span className="text-3xl font-bold text-white transform -rotate-12 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] group-hover:rotate-0 transition-transform duration-300 cursor-pointer">
                 E
               </span>
             </div>
+            <span className="ml-2 text-sm font-semibold text-white/80 group-hover:text-white transition-colors hidden lg:block">
+              The Export Express
+            </span>
           </Link>
 
           {/* Mobile Menu Button */}

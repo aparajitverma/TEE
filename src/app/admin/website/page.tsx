@@ -47,29 +47,66 @@ export default function WebsitePage() {
           </div>
         </div>
 
-        {/* Under Construction Message */}
-        <div className="bg-gray-800 border border-gray-700 rounded-xl p-12">
-          <div className="flex flex-col items-center justify-center text-center space-y-6">
-            <div className="w-24 h-24 bg-amber-900/30 rounded-full flex items-center justify-center">
-              <Construction className="w-12 h-12 text-amber-400" />
+        {/* Quick Access Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Products Management */}
+          <button
+            onClick={() => router.push('/admin/website/products')}
+            className="bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-emerald-500 hover:bg-gray-750 transition-all group text-left"
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-emerald-900/30 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Globe className="w-6 h-6 text-emerald-400" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">Products Management</h3>
+                <p className="text-sm text-gray-400">Manage website products</p>
+              </div>
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-3">
-                Under Construction
-              </h2>
-              <p className="text-gray-400 text-lg max-w-2xl">
-                This section is being rebuilt from scratch to provide better functionality
-                and remove hardcoded data. Check back soon!
-              </p>
+            <p className="text-sm text-gray-400">
+              Create, edit, and sync products to your website with full CRUD operations.
+            </p>
+            <div className="mt-4 text-emerald-400 text-sm font-medium">
+              Open Products →
             </div>
-            <div className="flex items-center gap-4 pt-4">
-              <button
-                onClick={() => router.push('/admin/dashboard')}
-                className="px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-medium"
-              >
-                Back to Dashboard
-              </button>
+          </button>
+
+          {/* Blog Management */}
+          <button
+            onClick={() => router.push('/admin/website/blog')}
+            className="bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-purple-500 hover:bg-gray-750 transition-all group text-left"
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-purple-900/30 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Construction className="w-6 h-6 text-purple-400" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">Blog Management</h3>
+                <p className="text-sm text-gray-400">Manage blog posts</p>
+              </div>
             </div>
+            <p className="text-sm text-gray-400">
+              Create, edit, and manage blog posts for your website.
+            </p>
+            <div className="mt-4 text-purple-400 text-sm font-medium">
+              Open Blog →
+            </div>
+          </button>
+
+          {/* Analytics - Coming Soon */}
+          <div className="bg-gray-800 border border-gray-700 rounded-xl p-6 opacity-50">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-blue-900/30 rounded-lg flex items-center justify-center">
+                <Construction className="w-6 h-6 text-blue-400" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white">Analytics</h3>
+                <p className="text-sm text-gray-400">Coming soon</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-400">
+              Track website traffic and performance metrics.
+            </p>
           </div>
         </div>
       </div>

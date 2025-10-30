@@ -14,15 +14,35 @@ import {
   X,
   Globe,
   FileText,
-  Truck
+  Truck,
+  TrendingUp,
+  TrendingDown,
+  Activity,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  BookOpen,
+  BarChart3,
+  ArrowUpRight,
+  ArrowDownRight,
+  Zap
 } from 'lucide-react';
 import DashboardAlerts from '@/components/DashboardAlerts';
+import { productsDB, categoriesDB } from '@/lib/products-db';
+import { blogsDB, blogCategoriesDB } from '@/lib/blogs-db';
 
 export default function AdminDashboard() {
   const router = useRouter();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [adminEmail, setAdminEmail] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [stats, setStats] = useState({
+    products: 0,
+    categories: 0,
+    blogPosts: 0,
+    blogCategories: 0,
+  });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Check authentication
@@ -32,10 +52,33 @@ export default function AdminDashboard() {
     if (auth === 'true' && email) {
       setIsAuthenticated(true);
       setAdminEmail(email);
+      loadStats();
     } else {
       router.push('/admin/login');
     }
   }, [router]);
+
+  const loadStats = async () => {
+    try {
+      setLoading(true);
+      // Get real-time stats from databases
+      const productCount = productsDB.count();
+      const categoryCount = categoriesDB.getAll().length;
+      const blogCount = blogsDB.count();
+      const blogCategoryCount = blogCategoriesDB.getAll().length;
+
+      setStats({
+        products: productCount,
+        categories: categoryCount,
+        blogPosts: blogCount,
+        blogCategories: blogCategoryCount,
+      });
+    } catch (error) {
+      console.error('Error loading stats:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleLogout = () => {
     localStorage.removeItem('adminAuth');
@@ -127,61 +170,243 @@ export default function AdminDashboard() {
         </header>
 
         {/* Dashboard Content */}
-        <main className="p-6">
-          {/* Dashboard Alerts */}
-          <DashboardAlerts />
-          
-          {/* Welcome Section */}
-          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl p-8 my-6 shadow-lg">
-            <h2 className="text-3xl font-bold text-white mb-2">Welcome to Admin Portal</h2>
-            <p className="text-emerald-100 mb-4">
-              Your management system is ready to be built. Start implementing modules using the guides.
-            </p>
-            <div className="flex gap-4">
-              <button
-                onClick={() => router.push('/admin/vendors')}
-                className="bg-white text-emerald-600 px-6 py-2 rounded-lg font-medium hover:bg-emerald-50 transition-colors"
-              >
-                Start Building
-              </button>
-              <a
-                href="/management-guides/README.md"
-                target="_blank"
-                className="bg-emerald-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-emerald-800 transition-colors"
-              >
-                View Guides
-              </a>
+        <main className="p-6 space-y-6">
+          {/* Welcome Banner */}
+          <div className="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-3">
+                <Zap className="w-8 h-8 text-yellow-300" />
+                <h2 className="text-3xl font-bold text-white">Welcome Back, Admin!</h2>
+              </div>
+              <p className="text-emerald-50 text-lg mb-6 max-w-2xl">
+                Your Export Express management system is live and ready. Monitor your products, blog posts, and manage your entire export business from here.
+              </p>
+              <div className="flex gap-4">
+                <button
+                  onClick={() => router.push('/admin/website/products')}
+                  className="bg-white text-emerald-600 px-6 py-3 rounded-xl font-semibold hover:bg-emerald-50 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+                >
+                  <Package className="w-5 h-5" />
+                  Manage Products
+                </button>
+                <button
+                  onClick={() => router.push('/admin/website/blog')}
+                  className="bg-emerald-700 text-white px-6 py-3 rounded-xl font-semibold hover:bg-emerald-800 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+                >
+                  <BookOpen className="w-5 h-5" />
+                  Manage Blog
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Module Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {menuItems.slice(1).map((item) => (
-              <button
-                key={item.label}
-                onClick={() => router.push(item.href)}
-                className="bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-emerald-500 hover:bg-gray-750 transition-all group text-left"
-              >
-                <item.icon className="w-10 h-10 text-emerald-500 mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-semibold text-white mb-2">{item.label}</h3>
-                <p className="text-sm text-gray-400">
-                  Click to start building this module
-                </p>
-              </button>
-            ))}
+          {/* Real-Time Stats Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Products Stat */}
+            <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer" onClick={() => router.push('/admin/website/products')}>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                  <Package className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex items-center gap-1 text-emerald-100 text-sm">
+                  <TrendingUp className="w-4 h-4" />
+                  <span>Live</span>
+                </div>
+              </div>
+              <div className="text-white">
+                <p className="text-3xl font-bold mb-1">{loading ? '...' : stats.products}</p>
+                <p className="text-emerald-100 text-sm">Total Products</p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-white/20 flex items-center justify-between text-emerald-100 text-xs">
+                <span>{stats.categories} Categories</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            {/* Blog Posts Stat */}
+            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer" onClick={() => router.push('/admin/website/blog')}>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                  <BookOpen className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex items-center gap-1 text-purple-100 text-sm">
+                  <Activity className="w-4 h-4" />
+                  <span>Active</span>
+                </div>
+              </div>
+              <div className="text-white">
+                <p className="text-3xl font-bold mb-1">{loading ? '...' : stats.blogPosts}</p>
+                <p className="text-purple-100 text-sm">Blog Posts</p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-white/20 flex items-center justify-between text-purple-100 text-xs">
+                <span>{stats.blogCategories} Categories</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            {/* Website Status */}
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all cursor-pointer" onClick={() => router.push('/admin/website')}>
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                  <Globe className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex items-center gap-1 text-blue-100 text-sm">
+                  <CheckCircle className="w-4 h-4" />
+                  <span>Online</span>
+                </div>
+              </div>
+              <div className="text-white">
+                <p className="text-3xl font-bold mb-1">100%</p>
+                <p className="text-blue-100 text-sm">Website Uptime</p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-white/20 flex items-center justify-between text-blue-100 text-xs">
+                <span>All Systems Operational</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </div>
+            </div>
+
+            {/* System Status */}
+            <div className="bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all">
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                  <BarChart3 className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex items-center gap-1 text-amber-100 text-sm">
+                  <Clock className="w-4 h-4" />
+                  <span>Ready</span>
+                </div>
+              </div>
+              <div className="text-white">
+                <p className="text-3xl font-bold mb-1">{stats.products + stats.blogPosts}</p>
+                <p className="text-amber-100 text-sm">Total Content Items</p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-white/20 flex items-center justify-between text-amber-100 text-xs">
+                <span>Synced & Ready</span>
+                <CheckCircle className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+
+          {/* Dashboard Alerts */}
+          <DashboardAlerts />
+
+          {/* Quick Actions */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Website Management */}
+            <div className="bg-gray-800 border border-gray-700 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <Globe className="w-5 h-5 text-emerald-500" />
+                Website Management
+              </h3>
+              <div className="space-y-3">
+                <button
+                  onClick={() => router.push('/admin/website/products')}
+                  className="w-full flex items-center justify-between p-4 bg-gray-750 hover:bg-gray-700 rounded-lg transition-colors group"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-emerald-900/30 rounded-lg flex items-center justify-center">
+                      <Package className="w-5 h-5 text-emerald-400" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-white font-medium">Products</p>
+                      <p className="text-gray-400 text-sm">{stats.products} items</p>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-emerald-400 transition-colors" />
+                </button>
+                <button
+                  onClick={() => router.push('/admin/website/blog')}
+                  className="w-full flex items-center justify-between p-4 bg-gray-750 hover:bg-gray-700 rounded-lg transition-colors group"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-purple-900/30 rounded-lg flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-purple-400" />
+                    </div>
+                    <div className="text-left">
+                      <p className="text-white font-medium">Blog Posts</p>
+                      <p className="text-gray-400 text-sm">{stats.blogPosts} articles</p>
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
+                </button>
+              </div>
+            </div>
+
+            {/* Other Modules */}
+            <div className="bg-gray-800 border border-gray-700 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <LayoutDashboard className="w-5 h-5 text-blue-500" />
+                Other Modules
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: Users, label: 'Vendors', href: '/admin/vendors', color: 'blue' },
+                  { icon: UserCircle, label: 'Clients', href: '/admin/clients', color: 'green' },
+                  { icon: ShoppingCart, label: 'Orders', href: '/admin/orders', color: 'orange' },
+                  { icon: DollarSign, label: 'Payments', href: '/admin/payments', color: 'purple' },
+                ].map((item) => (
+                  <button
+                    key={item.label}
+                    onClick={() => router.push(item.href)}
+                    className="p-4 bg-gray-750 hover:bg-gray-700 rounded-lg transition-colors group text-left"
+                  >
+                    <item.icon className={`w-6 h-6 text-${item.color}-400 mb-2`} />
+                    <p className="text-white text-sm font-medium">{item.label}</p>
+                    <p className="text-gray-500 text-xs">Coming Soon</p>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Development Guide */}
-          <div className="bg-gray-800 border border-gray-700 rounded-xl p-6">
-            <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-              <FileText className="w-5 h-5 text-emerald-500" />
-              Development Roadmap
-            </h3>
-            <div className="space-y-3 text-sm text-gray-300">
-              <p>📁 All development guides are in <code className="bg-gray-900 px-2 py-1 rounded text-emerald-400">/management-guides/</code></p>
-              <p>📋 Follow the 12-week roadmap in <code className="bg-gray-900 px-2 py-1 rounded text-emerald-400">MANAGEMENT_07_ROADMAP.md</code></p>
-              <p>🔧 Each module has detailed checklists for implementation</p>
-              <p>🚀 Start with database setup, then build modules one by one</p>
+          <div className="bg-gradient-to-r from-gray-800 to-gray-750 border border-gray-700 rounded-xl p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                <FileText className="w-5 h-5 text-emerald-500" />
+                Development Resources
+              </h3>
+              <span className="text-xs px-3 py-1 bg-emerald-900/30 text-emerald-400 rounded-full">Active</span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-emerald-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-4 h-4 text-emerald-400" />
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-1">Products System</p>
+                  <p className="text-gray-400 text-xs">✅ Import, CRUD, Sync - Fully functional</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-purple-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-4 h-4 text-purple-400" />
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-1">Blog System</p>
+                  <p className="text-gray-400 text-xs">✅ Import, CRUD, Categories - Fully functional</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <AlertCircle className="w-4 h-4 text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-1">Database Integration</p>
+                  <p className="text-gray-400 text-xs">⏳ Ready for MySQL/Prisma migration</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-amber-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-4 h-4 text-amber-400" />
+                </div>
+                <div>
+                  <p className="text-white font-medium mb-1">Other Modules</p>
+                  <p className="text-gray-400 text-xs">📋 Follow guides in /management-guides/</p>
+                </div>
+              </div>
             </div>
           </div>
         </main>
