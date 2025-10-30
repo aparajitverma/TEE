@@ -2,68 +2,73 @@ import type { Metadata } from 'next';
 import ProductDetail from '@/components/ProductDetail';
 
 export const metadata: Metadata = {
-  title: 'Pure Sandalwood Essential Oil - Mysore Sandalwood | The Export Express',
-  description: 'Authentic Mysore sandalwood essential oil from India. 100% pure, steam distilled, with rich woody aroma. Perfect for perfumery and aromatherapy.',
-  keywords: 'sandalwood oil export, mysore sandalwood, sandalwood essential oil, santalum album',
+  title: 'Sandalwood Essential Oil - Kashmir Sandalwood (Santalum album) | The Export Express',
+  description: 'Premium Kashmir sandalwood essential oil with 70-90% α-santalol. CITES compliant, GI certified, organic & fair-trade. FOB $1,200-$2,500/kg. Steam-distilled from 15+ year heartwood.',
+  keywords: 'sandalwood oil export, kashmir sandalwood, santalum album, alpha-santalol, CITES sandalwood, organic sandalwood oil, fair trade sandalwood',
 };
 
 export default function SandalwoodOilProductPage() {
   return (
     <ProductDetail
-      title="Pure Sandalwood Essential Oil (Mysore)"
+      title="Sandalwood Essential Oil (Santalum album)"
       category="Aromatic Effluences"
       heroImage="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&h=800&fit=crop"
       images={[
         { url: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&h=800&fit=crop", alt: "Sandalwood oil bottle" },
-        { url: "https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=800&h=800&fit=crop", alt: "Sandalwood wood" },
+        { url: "https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=800&h=800&fit=crop", alt: "Sandalwood heartwood" },
         { url: "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=800&h=800&fit=crop", alt: "Essential oil collection" },
       ]}
-      shortDescription="Authentic Mysore sandalwood essential oil (Santalum album) steam-distilled from sustainably sourced heartwood. Known as 'liquid gold,' our sandalwood oil features the characteristic rich, woody, sweet aroma prized in high-end perfumery and aromatherapy."
+      shortDescription="Premium Kashmir sandalwood essential oil (Santalum album) with 70-90% α-santalol. Steam-distilled from 15+ year old heartwood. CITES compliant, GI certified. The world's most valuable 'red gold' fragrance ingredient for ultra-luxury perfumery, high-end cosmetics, and aromatherapy."
       detailedDescription={[
-        "Mysore sandalwood from Karnataka, India, is considered the finest sandalwood in the world, producing essential oil of unparalleled quality and aroma complexity. Our sandalwood oil is extracted through careful steam distillation of heartwood from mature trees (minimum 15 years old), yielding a precious oil rich in alpha-santalol and beta-santalol, the key aromatic compounds. The oil's deep, warm, woody fragrance with subtle sweet undertones has made it one of the most sought-after ingredients in luxury perfumery, cosmetics, and aromatherapy for centuries.",
-        "Due to strict government regulations protecting sandalwood trees, we source our raw material exclusively through legal channels with proper documentation and permits. Each batch comes with complete traceability certificates and government-issued authenticity documents. Our distillation process uses traditional copper stills combined with modern quality control, ensuring optimal extraction while preserving the oil's therapeutic properties and aromatic profile. Laboratory testing confirms purity (100% pure, no additives), specific gravity, refractive index, and santalol content (typically 90%+ combined alpha and beta santalol).",
-        "Ideal for perfume houses creating oriental and woody fragrances, cosmetic manufacturers developing premium skincare products, aromatherapy practitioners, and essential oil distributors serving luxury markets. Sandalwood oil is known for its fixative properties in perfumery, skin-soothing benefits in cosmetics, and calming effects in aromatherapy. Available in various quantities from 10ml sample bottles to bulk orders. Due to the precious nature of this oil, prices are premium but competitive. We provide complete documentation including government permits, certificates of analysis, and CITES documentation where required for international trade."
+        "Kashmir sandalwood oil represents the pinnacle of aromatic excellence, commanding FOB prices of $1,200-$2,500/kg. Our oil is steam-distilled from heartwood of trees aged 15+ years, sourced exclusively from CITES-licensed growers in Kashmir, Himachal Pradesh, and Uttarakhand. The oil contains 70-90% α-santalol, the key compound responsible for its characteristic deep, woody, sweet aroma. India supplies approximately 80% of the world's premium sandalwood oil and holds the Geographical Indication (GI) tag for 'Kashmir Sandalwood'.",
+        "Our processing partners are GMP-certified distillation facilities using modern stainless-steel column stills with fractionating trays for optimal α-santalol recovery. Low-temperature vacuum distillation concentrates the oil to Category I grade (≥70% α-santalol) for top-tier perfumers. Each batch undergoes rigorous QC: GC-MS analysis, heavy metal testing (<10ppm), microbial load verification, and stability testing. We provide complete batch documentation including CoA, SDS, CITES export permit, Phytosanitary Certificate, and Certificate of Origin.",
+        "Target markets include luxury perfumery houses (Chanel, Dior), high-end cosmetics brands (L'Occitane, The Body Shop), aromatherapy retailers (doTERRA, Young Living), and Middle-East halal-certified distributors. Sandalwood oil serves as a fixative in perfumery, offers skin-soothing properties in cosmetics, and provides calming aromatherapy benefits. Available in 10ml-100ml amber glass ampoules with nitrogen flush, or 20L bulk drums for B2B. MOQ: 5kg for first orders. Premium certifications (Organic, Fair-Trade, COSMOS-Organic) add 20-50% to base pricing."
       ]}
       specifications={[
         { label: "Botanical Name", value: "Santalum album" },
-        { label: "Extraction Method", value: "Steam Distillation" },
-        { label: "Part Used", value: "Heartwood" },
-        { label: "Santalol Content", value: "90%+ (α & β combined)" },
-        { label: "Color", value: "Pale yellow to golden" },
-        { label: "Consistency", value: "Viscous liquid" },
-        { label: "Aroma", value: "Rich, woody, sweet" },
-        { label: "Shelf Life", value: "5+ years" },
+        { label: "Extraction Method", value: "Steam Distillation (Fractionation)" },
+        { label: "Part Used", value: "Heartwood (15+ years)" },
+        { label: "α-Santalol Content", value: "70-90% (Category I)" },
+        { label: "Color", value: "Pale yellow to golden amber" },
+        { label: "Specific Gravity", value: "0.97-0.98 at 20°C" },
+        { label: "Aroma Profile", value: "Deep woody, sweet, balsamic" },
+        { label: "Heavy Metals", value: "<10 ppm" },
+        { label: "Microbial Load", value: "<10³ CFU/g" },
+        { label: "Shelf Life", value: "3-5 years (stored <25°C, dark)" },
+        { label: "FOB Pricing", value: "$1,200-$2,500/kg" },
       ]}
-      origin="Karnataka (Mysore), India"
-      form="Pure Essential Oil"
+      origin="Kashmir, Himachal Pradesh, Uttarakhand, India"
+      form="Pure Essential Oil (70-90% α-santalol)"
       quantityOptions={[
-        "10 ml",
-        "50 ml",
-        "100 ml",
-        "500 ml",
-        "1 liter",
-        "5 liters+",
+        "10 ml amber ampoule",
+        "30 ml amber ampoule",
+        "100 ml amber ampoule",
+        "20 L bulk drum (B2B)",
+        "Custom quantities",
       ]}
       certifications={[
-        "GC-MS Tested",
+        "GMP Certified",
         "ISO 9001",
-        "Government Permits",
-        "CITES Compliant",
-        "Organic (Available)",
+        "USDA Organic (select grades)",
+        "Fair-Trade Certified",
+        "COSMOS-Organic",
+        "CITES Export Permit",
+        "GI Certification (Kashmir Sandalwood)",
+        "IFRA Compliant",
       ]}
-      hsCode="3301.29"
+      hsCode="3301.90"
       exportInfo={{
         markets: [
-          "France",
-          "United States",
-          "UAE",
-          "Switzerland",
-          "Japan",
-          "Singapore",
+          "USA (35%)",
+          "EU - Germany, France, UK (30%)",
+          "UAE & Saudi Arabia (12%)",
+          "Japan (8%)",
+          "South Korea (5%)",
+          "Australia",
         ],
-        packaging: "Amber glass bottles with tamper-proof seals",
-        moq: "100 ml",
-        leadTime: "20-25 days",
+        packaging: "Amber glass ampoules with nitrogen flush, UV-protective caps, FSC-certified cardboard boxes with QR-code traceability",
+        moq: "5 kg (first order), negotiable for repeat orders",
+        leadTime: "2-4 days processing + 5-7 days air freight (USA), 35-50 days sea freight (EU)",
       }}
       downloads={{
         specSheet: "/downloads/sandalwood-oil-spec-sheet.pdf",
@@ -71,24 +76,24 @@ export default function SandalwoodOilProductPage() {
       }}
       relatedProducts={[
         {
-          name: "Jasmine Absolute Oil",
+          name: "Jasmine Absolute",
           image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop",
-          link: "/products/aromatics/jasmine-oil",
+          link: "/products/aromatics/jasmine-absolute",
         },
         {
-          name: "Rose Essential Oil",
+          name: "Rose Absolute",
           image: "https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=400&h=400&fit=crop",
-          link: "/products/aromatics/rose-oil",
+          link: "/products/aromatics/rose-absolute",
         },
         {
-          name: "Vetiver Oil",
+          name: "Vetiver Essential Oil",
           image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop",
           link: "/products/aromatics/vetiver-oil",
         },
         {
-          name: "Patchouli Oil",
+          name: "Lemongrass Essential Oil",
           image: "https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=400&h=400&fit=crop",
-          link: "/products/aromatics/patchouli-oil",
+          link: "/products/aromatics/lemongrass-oil",
         },
       ]}
     />

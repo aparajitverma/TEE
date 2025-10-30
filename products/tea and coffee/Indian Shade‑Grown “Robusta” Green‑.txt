@@ -1,0 +1,144 @@
+Indian Shade‑Grown “Robusta” Green‑Coffee‑Bean Export Guide
+Low‑Acidity, High‑Caffeine, Shade‑Grown Robusta (Coffea robusta) – from plantation to the roaster’s bag
+
+Who should use this?
+
+Estate owners, contract growers, or processing centres in Andhra Pradesh, Karnataka, Kerala, Tamil Nadu and the North‑East that cultivate Robusta under a shade‑tree system and want to export single‑origin, low‑acid beans to specialty‑coffee markets (Europe, USA, Japan, Middle East, South‑East Asia).
+What is covered?
+
+Legal & certification framework
+Agronomy – shade‑grown, low‑acid management
+Harvest & post‑harvest handling
+Wet (washed) and dry (natural) processing routes
+Laboratory quality‑assurance (QA) & certifications
+Packaging, preservation & labelling
+Export documentation & customs procedures
+Freight, logistics & risk mitigation
+Market‑entry strategy & after‑sales support
+Quick‑start export checklist
+1️⃣ Legal & Certification Foundations
+Requirement	How to Obtain / Maintain	Frequency
+IEC (Import‑Export Code)	Apply on DGFT – IEC portal (2‑3 days).	Permanent (update if PAN/GST change).
+APEDA Export Licence	Submit PAN, GST, IEC, bank details, farm‑/processing‑unit details.	5‑year licence (renewable).
+FSSAI Food‑Safety License	Register as Food Business Operator (FBO).	Annual renewal.
+NPOP – Indian Food‑Safety Standard for Coffee	Compliance with pesticide‑residue, aflatoxin & heavy‑metal limits. Testing in NABL‑accredited lab.	Annual audit/report.
+ISO 22000 / ISO 9001	Implement QMS; engage registrar (SGS, DNV, Bureau Veritas).	3‑year certification, annual surveillance.
+Organic (APEDA‑Organic) – optional	Convert estate, maintain 2‑yr conversion, submit to APEDA.	1‑yr audit.
+Fair‑Trade / Rainforest Alliance – optional	Apply via certifying body; provide farmer‑level records, shade‑tree data.	1‑yr audit.
+Phytosanitary Certificate	Apply through APEDA – Plant Quarantine after packaging. Valid ≤ 30 days.	Per shipment.
+Certificate of Origin (CO)	Issued by Chamber of Commerce (e.g., Calcutta Chamber). Must list IEC & APEDA licence.	Per shipment.
+Letter of Credit (LC)	Agree with buyer; attach CoA, Phytosanitary, CO.	Per shipment.
+2️⃣ Agronomy – Shade‑Grown Low‑Acidity Robusta
+Stage	Technical Parameters	Best‑Practice Checklist
+Varietal	Coffea robusta – high‑caffeine (≈ 2.2 % w/w) and naturally lower perceived acidity than Arabica. Popular clones: ‘Robusta 5’, ‘Robusta 7’, ‘NCR‑98’ (cold‑tolerant).	Obtain clones from ICAR‑NBRI or APEDA‑approved nurseries; maintain a Clone Register.
+Altitude & Climate	300‑800 m ASL; mean annual temperature 22‑27 °C; annual rainfall 1 500‑2 500 mm; well‑drained loamy‑sandy soils, pH 5.0‑6.5.	Conduct soil‑profile analysis; amend with organic compost (4‑6 t ha⁻¹) + N‑PK (50‑30‑40 kg ha⁻¹).
+Shade‑Tree System	30‑45 % canopy cover; species: Eucalyptus spp., Albizia spp., Grevillea robusta, Acacia. Shade reduces canopy temperature 3‑5 °C → lowers fruit acidity and enhances bean size.	Record shade‑tree species & density; maintain biodiversity log (required for Fair‑Trade).
+Planting density	2 000‑2 400 plants ha⁻¹ (spacing 1.5 × 1.5 m).	GPS‑tag each plot; use field‑mapping software (ArcGIS/QGIS).
+Irrigation	Drip system, 0.8‑1.0 L m⁻² day⁻¹ during dry spells.	Install soil‑moisture sensors; schedule via IoT dashboard.
+Pest‑Disease Management	Main threats: Coffee Berry Borer (Hypothenemus hampei), Coffee Leaf Rust (Hemileia vastatrix), Root‑Knot Nematodes.	Adopt IPM – Trichoderma‑based bio‑fungicide, pheromone traps for borer, neem‑based miticide. Keep a pesticide‑use log; ensure residues below NPOP MRLs.
+Fertilisation	Basal: 50‑60 kg N ha⁻¹, 30‑40 kg P₂O₅ ha⁻¹, 40‑50 kg K₂O ha⁻¹; top‑dress N every 6 months.	Record each application; conduct leaf‑nutrient analysis yearly.
+Harvest timing	Selective hand‑picking of fully‑ripe red cherries (≈ 75 % red, 25 % green) during single‑crop season (Oct‑Jan for Andhra/Telangana, Feb‑May for Kerala).	Use hand‑held barcode scanner to capture plot‑ID, picker‑ID, pick‑time.
+Post‑harvest handling	Load cherries into ventilated bamboo baskets, transport to processing unit within 1 h to limit over‑ripe fermentation.	Record time‑in‑transit on batch sheet.
+Traceability	Batch‑Lot ID: RO‑RB‑FL‑YYMM‑NN (e.g., RO-RB-FL-2406-01). QR‑code printed on each bag, linked to ERP/LIMS.	End‑to‑end digital traceability mandatory for specialty markets.
+3️⃣ Harvest & Post‑Harvest Handling
+Operation	Key Parameters	Controls
+Reception & Initial Sort	Remove leaves, debris, underripe/overripe cherries. Mechanical sorter + manual hand‑picking.	Visual inspection; percentage of underripe < 5 %.
+Pulping	Rotary pulper – 80‑90 % pulp removal; mucilage remains on bean. Pulp‑solids ≈ 13 % of fresh weight.	Monitor pulp‑solids index; adjust pulper speed.
+Fermentation (Mucilage removal)	Water‑fermentation tanks at 22‑24 °C, pH 5.5‑6.0, duration 12‑16 h; stir 4‑6 times to prevent over‑fermentation.	Measure pulp‑solids loss; stop when < 0.5 % mucilage remains.
+Washing	Counter‑current water flow, 2‑3 × pulp volume, temperature 18‑20 °C.	Check turbidity of wash water (≤ 50 NTU).
+Drying (choose one)	Wet‑process (washed) → Sun‑dry or mechanical dryer to 11‑12 % moisture (dry‑rate ≤ 2 % kg⁻¹ h⁻¹).
+Dry‑process (Natural) → spread cherries on raised beds, 20‑30 °C, 70‑80 % RH, 12‑18 days, turn daily, target 11‑12 % moisture.	Use moisture meters (K‑F) at regular intervals; record drying curve.
+Hulling	Mechanical huller removes parchment; retains green bean at 11‑12 % moisture.	Verify defect rate ≤ 8 % (black beans, insect‑damaged).
+Polishing (optional)	Light polishing to remove silver skin – usually omitted for specialty beans.	If performed, document polish‑loss %.
+Grading	Screen‑sorting: < 15 mm (AA/AAA), 15‑18 mm (A), 18‑21 mm (B). Visual grading for colour, uniformity, defect count. Target AA ≥ 40 %, A ≥ 30 %, defects ≤ 8 %.	Use optical sorter (laser‑based) for size & colour; manual spot‑check.
+Storage	Climate‑controlled warehouse at 10‑12 °C, 60‑65 % RH, oxygen‑reduced atmosphere (N₂ ≈ 2 %).	Record temperature/humidity logs (data‑logger).
+Batch traceability	Capture lot‑ID, processing dates, fermentation time, drying profile, final moisture, grade, defect %.	Store in LIMS; QR‑code on each bag points to full batch dossier.
+Yield Benchmark – From fresh cherry to export‑grade green bean: 14‑16 % w/w (Robusta typically lower than Arabica).
+
+4️⃣ Laboratory Quality Assurance (QA)
+Parameter	Method (ISO/ASTM)	Specification – Low‑Acid Robusta
+Moisture (wet‑process)	ASTM D 4897‑13 (Karl‑Fischer).	11‑12 % ± 0.5 %
+Size distribution	ASTM D 7615‑18 (sieve analysis).	AA ≥ 40 % ≥ 15 mm; A ≥ 30 % 13‑15 mm; B ≤ 20 % < 13 mm
+Defect rate	Visual inspection per Specialty Coffee Association (SCA) Cup Protocol.	Total defects ≤ 8 % (black beans, insect damage, mould).
+Cupping score	SCA cupping – 100‑point scale; target ≥ 84 (high‑quality Robusta).	Record flavour notes, acidity (perceived < Medium), body, after‑taste.
+Caffeine content	HPLC (USP < 2171).	2.0‑2.5 % w/w (typical for Robusta).
+Aflatoxin B1	ELISA (ISO 19075‑1).	≤ 5 µg kg⁻¹ (EU limit) – aim ≤ 2 µg kg⁻¹.
+Pesticide residues	LC‑MS/MS (NPOP).	All residues below each pesticide’s MRL (e.g., chlorpyrifos ≤ 0.01 mg kg⁻¹).
+Heavy metals (Pb, Cd, As, Hg)	ICP‑MS (ISO 17294‑2).	Pb ≤ 0.1 ppm, Cd ≤ 0.05 ppm, As ≤ 0.2 ppm, Hg ≤ 0.01 ppm.
+Microbial load	ISO 20776‑1 (Total Plate Count).	≤ 10³ CFU g⁻¹.
+Certificate of Analysis (CoA)	Generated per batch, signed by Head of QA, QR‑code links to full lab report (PDF‑A).	Must accompany every shipment.
+5️⃣ Packaging, Preservation & Labelling
+Item	Specification	Rationale
+Primary pack	PP‑lined jute bags (50 kg), inner poly‑liner (PE), ventilation holes 4 mm.	Breathable, protects beans from moisture, complies with BIS IS 3024.
+Secondary pack	Four‑wall corrugated cartons (1800 × 1200 × 1000 mm) with corner protectors and inner foam inserts.	Shock‑absorption during sea/rail transport.
+Label content (mandatory)	• “Shade‑Grown Robusta – Estate X, Andhra Pradesh, India”
+• Batch‑Lot ID (QR‑code)
+• Net weight, moisture %
+• FSSAI licence No.
+• Certification logos (Organic, Fair‑Trade, Rainforest)
+• “For Roasting Only – Not for Direct Consumption”.	Meets BIS, EU, US labeling regulations.
+Barcoding / RFID	GS1‑128 linear barcode on each carton; optional UHF RFID tag for high‑value consignments.	Enables customs scan & buyer WMS integration.
+Preservation	Store at 10‑12 °C, 60‑65 % RH, oxygen‑reduced atmosphere (N₂ ≈ 2 %); include silica‑gel sachets (0.3 % w/w) for voyages > 30 days.	Prevents bean sprouting, mould, and preserves volatile precursors.
+Shelf‑life	24 months from packing when conditions are maintained (validated by ASTM D 7032 accelerated aging).	Proven for shade‑grown Robusta.
+6️⃣ Export Documentation (End‑to‑End Paper Trail)
+Document	Issuer	Core Information
+Commercial Invoice	Exporter	FOB/CIF price, HS‑code 0901 21 00, currency, payment terms, bank details.
+Packing List	Exporter	Bag numbers, batch‑lot IDs, net/gross weight, dimensions, seal number.
+Certificate of Origin (CO)	Chamber of Commerce (Calcutta, Delhi, etc.)	IEC, APEDA licence, estate name, product description.
+Phytosanitary Certificate	APEDA – Plant Quarantine	Pest‑free confirmation; validity ≤ 30 days.
+Certificate of Analysis (CoA)	QA Lab (NABL‑accredited)	Moisture, size, defect %, cupping score, pesticide/metal residues, aflatoxin.
+Material Safety Data Sheet (MSDS)	Exporter	GHS classification, handling & storage instructions.
+Letter of Credit (LC)	Buyer’s bank	Must reference invoice, CoA, Phytosanitary, CO.
+Insurance Certificate	Marine insurer (e.g., JCB Insurance)	“All Risks” covering loss, damage, moisture.
+Export Declaration (Shipping Bill)	Customs via ICEGATE	Generates Bill of Export (BE) number.
+FSSAI Import Permit (if buyer intends functional‑food use)	FSSAI	Required for nutraceutical/food‑additive applications.
+All PDFs should be PDF/A, digitally signed, stored in a secure cloud DMS (SharePoint, DocuWare) with role‑based access.
+
+7️⃣ Freight, Logistics & Risk Management
+Decision	Recommended Practice
+Incoterm	FOB (Mangaluru / Kochi Port) – most common for green coffee; CIF if buyer prefers freight & insurance handled by exporter.
+Transport mode	Sea freight – 20‑ft or 40‑ft HC containers (≈ 1 200 kg per 20‑ft, 2 000 kg per 40‑ft).
+Air freight only for urgent samples (≤ 50 kg).
+Container loading	Place jute bags on 1200 × 1000 mm pallets, max height 1.2 m. Secure with strap‑bands; record seal number on packing list.
+Temperature & humidity	Not temperature‑critical, but keep < 30 °C and < 80 % RH to avoid bean sprouting or mould. Include silica‑gel packets for > 30‑day voyages.
+Tracking	GPS tracker on container; optional temperature data logger (log every 4 h). Share live location via client portal.
+Customs – India	Random inspections possible; keep CoA, MSDS, Phytosanitary ready. Pay IGST (if any) and claim GST refund under Export Scheme.
+Customs – Destination	Provide Bill of Lading, Invoice, CO, Phytosanitary, CoA, LC. Most destinations apply 0 % duty under HS 0901.21.
+Insurance	“All‑Risks” covering loss, theft, moisture damage – essential for premium specialty beans.
+Demurrage	Negotiate 5 free‑days with carrier; keep a demurrage contingency fund (~US $1 000 per container).
+Risk mitigation	• Crop‑insurance via PMFBY (covers weather loss).
+• Price‑hedge using MCX Coffee Futures or OTC forward contracts with banks.
+8️⃣ Market‑Entry Strategy & After‑Sales
+Activity	Practical Steps
+Brand narrative	Highlight “Shade‑Grown, Low‑Acidity Robusta – Estate X, Andhra Pradesh”, include QR‑code linking to estate video, altitude map, shade‑tree data, cupping notes.
+Target buyers	• Specialty roasters (US, EU, Japan) seeking high‑caffeine, low‑acid beans for espresso blends.
+• Third‑wave coffee chains (Blue Bottle, Stumptown).
+• Food‑tech & nutraceutical firms (high‑caffeine extracts).
+Samples	Send 5 kg of each lot in sealed PP‑lined bags with digital CoA and cupping sheet. Follow up within 48 h via a short online survey.
+Pricing	Base on Coffee Cost Index (CCI) + processing margin + premium for shade‑grown, low‑acid, certifications. Review quarterly.
+Trade shows	Specialty Coffee Expo (NYC), World Coffee Conference (Berlin), Coffee Asia (Hong Kong). Secure booth with live QR‑code scanning of estate data.
+Digital B2B presence	Maintain a profile on Alibaba, TradeIndia, and a dedicated website with batch‑level traceability (API feed for buyer’s ERP).
+Risk mitigation	• Crop‑insurance (PMFBY).
+• Currency‑hedge via forward contracts.
+After‑sales support	Provide roasting guidelines (e.g., Light‑Medium roast: 180‑200 °C, 9‑12 min) and cupping assistance (virtual or on‑site).
+Re‑order planning	Robusta harvest is single‑crop; maintain a 12‑month production forecast and communicate lead‑times to buyers.
+9️⃣ Quick‑Start Export Checklist (Print‑Ready)
+✅	Item	Remarks
+1	IEC & APEDA Export Licence active	Upload to cloud DMS.
+2	Estate registered as Shade‑Grown Robusta (GPS‑tagged plots)	Verify altitude & shade‑tree data.
+3	Harvest calendar (Oct‑Jan) finalized	Align with buyer’s lead‑time.
+4	Processing plant ISO 22000 / ISO 9001 certified	Internal audit within 30 days.
+5	Batch CoA generated (moisture, size, defect %, cupping, residues)	Signed by QA Head; QR‑code attached.
+6	Primary (jute‑bag) & secondary (corrugated) packaging compliant	Barcode & RFID affixed.
+7	Phytosanitary Certificate obtained (valid ≥ 30 days)	Confirm with APEDA.
+8	Certificate of Origin issued by Chamber	Include IEC & estate name.
+9	Commercial Invoice, Packing List, LC, Insurance ready	PDFs stored in Export folder.
+10	Freight forwarder booked; container sealed, seal number logged	GPS tracker installed.
+11	Export Declaration filed on ICEGATE (BE number generated)	Verify with customs broker.
+12	Post‑shipment follow‑up (buyer feedback, re‑order)	Record in CRM.
+📌 Final Takeaway
+Exporting shade‑grown, low‑acid Indian Robusta combines agronomic nuance (shade canopy, altitude, careful pest management) with stringent post‑harvest control (wet or dry processing, precise moisture management, rigorous QA) and full‑stack compliance (IEC, APEDA, NPOP, ISO, phytosanitary, CoA).
+
+By institutionalising the workflow outlined above—traceability from plot to bag, laboratory‑validated quality, professional packaging, flawless documentation, and reliable sea logistics—you will meet the exacting standards of specialty‑coffee roasters worldwide and command premium prices for a product that brings the distinctive boldness of Robusta with a smoother, low‑acid profile.
+
+Happy exporting, and may your beans travel safely from the Indian hills to the perfect cup across the globe!

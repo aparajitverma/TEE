@@ -1,0 +1,132 @@
+Darjeeling “First Flush” Whole‑Leaf Black & Oolong
+
+
+Darjeeling “First Flush” Whole‑Leaf Black & Oolong Tea – End‑to‑End Export Play‑book
+Target audience: tea estates, contract factories, export houses, and boutique tea merchants that already own (or plan to contract) a orthodox tea‑processing line for the premium “First Flush” segment.
+
+1️⃣ Why Darjeeling First Flush?
+Attribute	Black (Orthodox)	Oolong (Semi‑oxidised)
+Geography	Darjeeling district, West Bengal – alt. 900‑2 200 m, mist‑laden slopes, acidic soils.	Same estates; processing is stopped at 30‑45 % oxidation (vs. ~100 % for black).
+Season	First Flush (≈ late March – early May) – highest catechin and aromatic volatiles (linalool, geraniol, 2‑phenylethanol).	Same flush – yields a bright, floral‑fruity Oolong with a “muscatel” note.
+GI Protection	Geographical Indication (GI) – “Darjeeling Tea” (registered under WTO). Mandatory on label.	Same GI; labelling must state “Darjeeling Oolong – First Flush”.
+Typical FOB price (2023‑24)	US $3.80‑$4.90 kg⁻¹ (premium FTGFOP).	US $4.20‑$5.80 kg⁻¹ (FTGFOP‑Oolong).
+Key markets	USA, UK, Germany, France, Japan, Singapore, Kenya (re‑export).	USA, UK, Japan, Korea, Singapore, Middle East.
+HS‑Code	0901 11 00 – Darjeeling black tea (whole‑leaf).	0901 12 00 – Darjeeling Oolong (semi‑oxidised).
+2️⃣ Legal & Certification Foundations
+Requirement	How to Secure	Frequency / Renewal
+IEC (Import‑Export Code)	Apply on DGFT – IEC portal (2‑3 days).	Permanent; update if PAN/GST changes.
+APEDA Export Licence	Submit PAN, GST, IEC, bank details; upload estate/processing plant details.	5‑year licence (renewable).
+GI Tag	Ensure estate is registered under Darjeeling Tea GI (certificate from GI Registry, Ministry of Commerce).	Valid per estate; maintain records.
+NPOP (Food‑Safety Standard for Tea)	Compliance with pesticide‑residue, heavy‑metal limits. Get lab‑tested (NABL‑accredited).	Annual audit; report each batch.
+ISO 22000 / ISO 9001	Implement QMS; engage a registrar (SGS, BV, DNV).	3‑year certification, annual surveillance.
+Optional: Fair‑Trade, Rainforest Alliance, Organic (APEDA‑Organic)	Apply via accrediting bodies; provide farm‑level evidence & audits.	1‑year audit cycle.
+Phytosanitary Certificate	Apply through APEDA Plant Quarantine after final packing; inspector verifies pest‑free status.	Valid for 30 days from issuance.
+Certificate of Origin (CO)	Chamber of Commerce (e.g., Delhi/Calcutta Chamber). Must cite IEC and GI.	Issued per shipment.
+Letter of Credit (LC) / Documentary Credit	Agree with buyer; attach CoA, Phytosanitary, CO.	Per shipment.
+3️⃣ Estate & Agronomic Practices (From Seed to Leaf)
+Step	Technical Specification	Best‑Practice Checklist
+Planting material	Certified Camellia sinensis var. assamica clones (e.g., ‘Moul‑Ventral’, ‘Darjeeling 1A’) from ICAR‑NBRI.	Maintain a Clone Register; tag each bud with a QR‑code.
+Soil & Altitude	Loamy‑sandy, acidic (pH 4.5‑5.2), altitude 950‑2 150 m.	Annual soil test; apply organic compost (5‑8 t ha⁻¹) + N‑PK (70‑30‑40 kg ha⁻¹).
+Irrigation	Drip system, 0.4‑0.6 L m⁻² day⁻¹ after establishment; natural monsoon thereafter.	Install soil‑moisture sensors for water‑use efficiency.
+Pest & Disease Management	Main threats: mite (Tetranychus spp.), blister blight, root rot.	Adopt IPM: Trichoderma bio‑fungicide, neem‑based miticide, pheromone traps. Log all pesticide applications; ensure residues < NPOP MRL.
+Plucking regime	Two‑leaf‑and‑a‑bud for premium first flush; hand‑picked early morning (04:00‑07:00).	Train pluckers; use hand‑held GPS devices to record plot & time.
+Harvest timing (First Flush)	Late March – early May; leaf bud‑burst stage (high catechins).	Use phenological calendar + remote‑sensing NDVI to forecast optimum pluck window.
+Leaf handling	Immediate transport to factory ≤ 30 min; keep in ventilated bamboo baskets to avoid wilting.	Record time‑in‑transit on batch sheet.
+Traceability	Batch‑Lot ID: DJ‑BF‑FL1‑YYMM‑NN (e.g., DJ-BF-FL1-2403-01). QR‑code on each bale; GPS‐tagged plot.	Integrated with ERP/LIMS for downstream CoA generation.
+4️⃣ Orthodox Processing – Black vs. Oolong
+Process	Black (FTGFOP)	Oolong (Semi‑oxidised)
+Withering	25‑28 °C, 65‑70 % RH, 12‑14 h. Goal: 55‑60 % moisture.	Same temperature; 8‑10 h (less moisture loss).
+Rolling (Orthodox roller)	Light pressure 30‑40 MPa, roll speed 70‑85 rpm; leaves are twisted, not crushed.	Same roller; stop rolling after 2‑3 min (less cell rupture).
+Oxidation (Fermentation)	25‑28 °C, 95‑100 % RH, 45‑60 min (first flush). Aim TF:TR index ≥ 1500.	25‑28 °C, 95‑100 % RH, 30‑45 min (stops at 30‑45 % oxidation). TF:TR index ≈ 900‑1100; distinct floral profile.
+Fixation (Pan‑firing)	80‑90 °C, 3‑4 min to halt oxidation.	Same temperature; shorter time (2‑3 min) to retain semi‑oxidised character.
+Drying (Kiln)	80‑90 °C, 4‑5 h, final moisture ≤ 3 %.	Same temperature; 5‑6 h for a slightly higher final moisture (≈ 3.5 %).
+Sorting & Grading	FTGFOP, SFTGFOP – whole leaf, long‑tipped, uniform size, minimal stems.	Same grades but labelled FTGFOP‑Oolong; leaf size slightly smaller (more broken leaf allowed).
+Bulk Packing	PP‑lined jute bags (50 kg) – vented, printed with GI label, batch‑lot, moisture %.	Same bag type; Oolong bags may have different colour coding (e.g., orange vs. green).
+Key Control Parameters (per batch):
+• Moisture after withering – 55‑60 % (use Karl‑Fischer).
+• Oxidation index – measured by spectrophotometric absorbance at 380 nm (TF + TR).
+• Leaf breakage – ≤ 5 % for FTGFOP, ≤ 8 % for Oolong.
+
+5️⃣ Laboratory Quality Assurance (QA)
+Parameter	Method (ISO/ASTM)	Specification – First Flush
+Moisture (wet basis)	ASTM D 4442 (Karl‑Fischer).	≤ 3 % ± 0.3 %
+Ash	ISO 6571.	≤ 2.5 %
+Caffeine	HPLC, USP < 2171.	2.5‑3.5 % w/w
+Theaflavin (TF) + Thearubigin (TR) index	Spectrophotometric, λ = 380 nm (ISO 17025).	Black ≥ 1500; Oolong 900‑1100
+Total polyphenols	Folin‑Ciocalteu (ISO 17025).	70‑80 % dry weight
+Pesticide residues	LC‑MS/MS (NPOP).	Below each MRL (e.g., chlorpyrifos ≤ 0.01 mg kg⁻¹)
+Heavy metals (Pb, Cd, As, Hg)	ICP‑MS (ISO 17294‑2).	Pb ≤ 0.1 ppm; Cd ≤ 0.05 ppm; As ≤ 0.2 ppm; Hg ≤ 0.01 ppm
+Microbial load	ISO 20776‑1.	≤ 10³ CFU g⁻¹
+Sensory panel	Certified tea‑taster (ISO 13312).	Colour‑golden‑amber; aroma‑floral‑muscatel; liquor‑bright‑a‑string‑a‑brisk‑dry‑finish.
+Certificate of Analysis (CoA)	Generated per batch, signed by Head of QA; includes QR‑code linking to full lab report.	Must accompany every shipment.
+6️⃣ Packaging, Preservation & Labelling
+Item	Specification	Rationale
+Primary pack	50‑kg jute bags (90 % natural fibre) with ventilation holes (4 mm); inner PP liner for moisture barrier.	Allows breathability, complies with BIS IS 3024; prevents mould.
+Secondary pack	Four‑wall corrugated cartons (1800 × 1200 × 1000 mm) with corner protectors and foam inserts.	Shock absorption for sea/rail transport.
+Labeling (mandatory)	- “Darjeeling First Flush – Whole‑Leaf Black (FTGFOP) / Oolong (FTGFOP‑Oolong)”.
+- Batch‑Lot ID (QR‑code).
+- Net weight, moisture %.
+- GI logo (Darjeeling Tea).
+- FSSAI licence No.
+- Optional cert logos (Organic, Fair‑Trade).	Meets BIS, EU Cosmetic/Food & US FDA label rules.
+Barcoding / RFID	GS1‑128 linear barcode on each carton, optional UHF RFID tag.	Enables customs scan & buyer WMS integration.
+Preservation	Store at 15‑20 °C, < 70 % RH, away from direct sunlight. Include silica‑gel sachets (0.5 % w/w) for shipments > 30 days.	Prevents oxidation of volatile aromatics.
+Shelf‑life	24 months from packing date when stored under recommended conditions.	Proven by accelerated‑aging studies (ASTM D 7032).
+7️⃣ Export Documentation (Complete Paper Trail)
+Document	Who Issues	Core Content
+Commercial Invoice	Exporter	FOB/CIF price, HS‑code 0901 11/12, currency, payment terms, bank details.
+Packing List	Exporter	Bag numbers, batch‑lot IDs, net & gross weight, dimensions, seal number.
+Certificate of Origin (CO)	Chamber of Commerce (e.g., Calcutta Chamber)	IEC, GI reference, export licence number.
+Phytosanitary Certificate	APEDA – Plant Quarantine	Confirmation of pest‑free status (valid ≤ 30 days).
+Certificate of Analysis (CoA)	QA Lab (NABL‑accredited)	Moisture, caffeine, TF/TR, pesticide & heavy‑metal results, sensory rating.
+Material Safety Data Sheet (MSDS)	Exporter	Hazard classification (GHS), handling & storage instructions.
+Letter of Credit (LC)	Buyer’s bank	Aligns with invoice; requires copy of CoA, Phytosanitary, CO.
+Insurance Certificate	Marine insurer (e.g., JCB Insurance)	“All Risks” covering loss, damage, moisture.
+Export Declaration (Shipping Bill)	Customs via ICEGATE	Generates Bill of Export (BE) number.
+FSSAI Import Permit (if for functional‑food)	FSSAI	Required when buyer uses the tea for nutraceuticals.
+All documents should be saved as PDF/A, digitally signed, and uploaded to a secure cloud DMS (e.g., SharePoint, DocuWare) with controlled access for buyer and freight forwarder.
+
+8️⃣ Freight & Logistics
+Decision	Options & Best Practices
+Incoterm	FOB (Ramgarh Port) – standard for bulk tea.
+CIF if buyer wants freight & insurance managed by exporter.
+Mode	Sea freight – 20‑ft or 40‑ft HC containers (≈ 1 200 kg per 20‑ft, 2 000 kg per 40‑ft).
+Air freight only for small, urgent sample consignments (≤ 50 kg).
+Container loading	Place bags on 1200 × 1000 mm pallets, height ≤ 1.2 m. Secure with strap‑bands; attach seal number on seal log.
+Temperature & humidity	Not temperature‑critical, but keep < 30 °C and < 80 % RH to avoid mould. Use silica‑gel packets for voyages > 30 days.
+Tracking	GPS tracker + optional humidity data logger (Bluetooth‑enabled). Share live location via buyer portal.
+Customs (India)	Random inspection possible; keep CoA, MSDS, Phytosanitary ready. Pay IGST (if any) and claim GST refund under Export Scheme.
+Customs (Destination)	Provide Bill of Lading, Commercial Invoice, CO, Phytosanitary, CoA, LC. Most major markets apply 0 % duty on HS 0901 under WTO‑GATT.
+Insurance	“All‑Risks” covering loss, theft, moisture damage – essential for premium FTGFOP consignments.
+Demurrage Management	Pre‑agree free‑days (usually 5) with carrier; have a demurrage contingency fund (≈ US $1 000 per container).
+9️⃣ Marketing & Market‑Entry Strategy
+Action	Practical Steps
+Brand story	Highlight “Darjeeling First Flush – GI‑protected, hand‑plucked at 1 500 m, floral‑muscatel aroma”. Use high‑resolution images of the estate, QR‑code linking to a video of the harvest.
+Target Segments	• CTC – bulk‑blend manufacturers (tea‑bag, instant).
+• Orthodox Black (FTGFOP) – specialty tea houses, five‑star hotels, premium retail.
+• Oolong (FTGFOP‑Oolong) – niche Asian markets, specialty cafés, health‑drink manufacturers.
+Sample program	Send 3 kg of each grade in sealed, labelled cartons, with digital CoA. Follow up within 48 h; collect feedback via a simple Google Form.
+Pricing	Use Tea Cost Index (TCI) as base; add processing margin + premium for GI, organic/fair‑trade. Review quarterly.
+Trade shows	World Tea Expo (USA), ITMA (Germany), Tea & Coffee Asia (HK), Specialty Tea Expo (UK). Secure booth with live video of the estate.
+Digital presence	Maintain a B2B portal (Alibaba, TradeIndia) with QR‑code‑enabled traceability. Update with batch photos, lab reports, and certifications.
+Risk mitigation	• Crop‑insurance via PMFBY (covers weather loss).
+• Price‑hedge through MCX Tea Futures or OTC forward contracts with banks.
+After‑sales support	Provide brewing guidelines (water temp 90‑95 °C, steep 2‑3 min for black; 80‑85 °C, 1‑2 min for Oolong). Offer technical assistance for B2B clients launching new blends.
+🔟 Quick‑Start Export Checklist (Print‑Ready)
+✅	Item	Remarks
+1	IEC active & APEDA Export Licence uploaded	Keep in cloud DMS.
+2	Estate registered under Darjeeling GI	Verify GI certificate number.
+3	Harvest calendar for First Flush in place	Align with buyer’s production plan.
+4	Processing plant ISO 22000 / ISO 9001 certified	Internal audit within 30 days.
+5	Batch CoA prepared (Moisture, TF/TR, Pesticide)	Signed by QA Head.
+6	Primary (jute) & secondary (corrugated) packaging compliant	Barcode & QR‑code affixed.
+7	Phytosanitary Certificate obtained (valid ≥ 30 days)	Confirm with APEDA.
+8	Certificate of Origin issued by Chamber	Include IEC & GI label.
+9	Commercial Invoice, Packing List, LC, Insurance ready	PDFs stored in Export folder.
+10	Freight forwarder booked; container sealed, seal number logged	GPS tracker installed.
+11	Export Declaration filed on ICEGATE (BE number generated)	Verify with customs broker.
+12	Post‑shipment follow‑up (buyer feedback, re‑order)	Record in CRM.
+📌 Final Takeaway
+Exporting Darjeeling First Flush Whole‑Leaf Black & Oolong Tea is a premium, high‑margin business that succeeds only when farm‑to‑cup traceability, strict GI compliance, and world‑class quality control are embedded in every step. By following the systematic roadmap above—starting with legal clearances, moving through disciplined agronomy, precise orthodox processing, rigorous lab certification, and seamless logistics—you will meet the expectations of the most discerning importers while protecting the heritage and reputation of Darjeeling tea on the global stage.
+
+Enjoy the journey from mist‑clad hills to a fine brew in a client’s cup!

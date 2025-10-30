@@ -1,0 +1,872 @@
+// This is your Prisma schema file
+// Learn more: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Vendor Management Model
+model Vendor {
+  // Basic Information
+  id            Int      @id @default(autoincrement())
+  vendorCode    String   @unique @map("vendor_code")
+  vendorName    String   @map("vendor_name")
+  vendorType    String   @map("vendor_type") // Farmer, Processor, Wholesaler, Service Provider
+  status        String   @default("Active") // Active, Inactive, Blacklisted
+  rating        Float?   @default(0)
+  dateAdded     DateTime @default(now()) @map("date_added")
+  lastUpdated   DateTime @updatedAt @map("last_updated")
+
+  // Contact Information
+  contactPerson   String  @map("contact_person")
+  phonePrimary    String  @map("phone_primary")
+  phoneSecondary  String? @map("phone_secondary")
+  email           String?
+  whatsapp        String?
+  addressLine1    String? @map("address_line1")
+  addressLine2    String? @map("address_line2")
+  city            String?
+  state           String?
+  pincode         String?
+  country         String? @default("India")
+
+  // Business Details
+  gstin              String? @unique
+  pan                String?
+  bankName           String? @map("bank_name")
+  bankAccountNumber  String? @map("bank_account_number")
+  bankIfsc           String? @map("bank_ifsc")
+  bankBranch         String? @map("bank_branch")
+  paymentTerms       String? @map("payment_terms") // Net 30, Net 60, Advance, etc.
+  creditLimit        Float?  @default(0) @map("credit_limit")
+
+  // Product & Capacity (stored as JSON)
+  productsSupplied   String? @map("products_supplied") // JSON array
+  monthlyCapacity    String? @map("monthly_capacity")
+  minimumOrderQty    String? @map("minimum_order_qty")
+  leadTimeDays       Int?    @default(0) @map("lead_time_days")
+  certifications     String? // JSON array
+
+  // Performance Metrics
+  totalOrders         Int      @default(0) @map("total_orders")
+  totalValue          Float    @default(0) @map("total_value")
+  qualityRating       Float?   @default(0) @map("quality_rating")
+  deliveryRating      Float?   @default(0) @map("delivery_rating")
+  communicationRating Float?   @default(0) @map("communication_rating")
+  lastOrderDate       DateTime? @map("last_order_date")
+  outstandingAmount   Float    @default(0) @map("outstanding_amount")
+
+  // Documents & Notes
+  documents         String? // JSON array of file URLs
+  notes             String?
+  contractStartDate DateTime? @map("contract_start_date")
+  contractEndDate   DateTime? @map("contract_end_date")
+  contractFileUrl   String?   @map("contract_file_url")
+
+  @@map("vendors")
+}
+
+// Order Management Model
+model Order {
+  // Order Identification
+  id             Int      @id @default(autoincrement())
+  orderNumber    String   @unique @map("order_number")
+  inquiryNumber  String?  @map("inquiry_number")
+  quoteNumber    String?  @map("quote_number")
+  orderType      String   @map("order_type") // Export, Domestic, Sample
+  orderStatus    String   @map("order_status") // Inquiry, Quoted, Confirmed, Processing, Shipped, Delivered, Cancelled
+  priority       String   @default("Medium") // Low, Medium, High, Urgent
+
+  // Client Information (denormalized for quick access)
+  clientId       Int?     @map("client_id")
+  clientName     String   @map("client_name")
+  clientEmail    String?  @map("client_email")
+  clientPhone    String?  @map("client_phone")
+  billingAddress String?  @map("billing_address") // JSON
+  shippingAddress String? @map("shipping_address") // JSON
+
+  // Order Details
+  orderDate              DateTime  @map("order_date")
+  inquiryDate            DateTime? @map("inquiry_date")
+  quoteDate              DateTime? @map("quote_date")
+  expectedDeliveryDate   DateTime? @map("expected_delivery_date")
+  actualDeliveryDate     DateTime? @map("actual_delivery_date")
+  leadTimeDays           Int?      @map("lead_time_days")
+
+  // Pricing
+  subtotal       Float   @default(0)
+  taxAmount      Float   @default(0) @map("tax_amount")
+  shippingCost   Float   @default(0) @map("shipping_cost")
+  discountAmount Float   @default(0) @map("discount_amount")
+  totalAmount    Float   @default(0) @map("total_amount")
+  currency       String  @default("USD")
+  exchangeRate   Float?  @default(1) @map("exchange_rate")
+
+  // Shipping Information
+  incoterm              String?   @map("incoterm")
+  portOfLoading         String?   @map("port_of_loading")
+  portOfDischarge       String?   @map("port_of_discharge")
+  shippingMethod        String?   @map("shipping_method")
+  shippingLine          String?   @map("shipping_line")
+  containerNumber       String?   @map("container_number")
+  blNumber              String?   @map("bl_number")
+  awbNumber             String?   @map("awb_number")
+  trackingNumber        String?   @map("tracking_number")
+  estimatedDepartureDate DateTime? @map("estimated_departure_date")
+  actualDepartureDate    DateTime? @map("actual_departure_date")
+  estimatedArrivalDate   DateTime? @map("estimated_arrival_date")
+  actualArrivalDate      DateTime? @map("actual_arrival_date")
+
+  // Packaging Information
+  numberOfPackages       Int?      @map("number_of_packages")
+  packageType            String?   @map("package_type") // Cartons, Bags, Pallets, Drums, etc.
+  grossWeight            Float?    @map("gross_weight")
+  netWeight              Float?    @map("net_weight")
+  weightUnit             String?   @default("kg") @map("weight_unit")
+  dimensions             String?   // JSON: length, width, height
+  specialHandling        String?   @map("special_handling")
+
+  // Payment Information
+  paymentTerms         String?   @map("payment_terms")
+  paymentStatus        String    @default("Pending") @map("payment_status") // Pending, Partial, Paid
+  advancePercentage    Float?    @default(0) @map("advance_percentage")
+  advanceAmount        Float?    @default(0) @map("advance_amount")
+  advanceReceivedDate  DateTime? @map("advance_received_date")
+  balanceAmount        Float?    @default(0) @map("balance_amount")
+  balanceReceivedDate  DateTime? @map("balance_received_date")
+  paymentMethod        String?   @map("payment_method")
+
+  // Documents (URLs stored as JSON)
+  proformaInvoiceUrl        String? @map("proforma_invoice_url")
+  commercialInvoiceUrl      String? @map("commercial_invoice_url")
+  packingListUrl            String? @map("packing_list_url")
+  certificateOfOriginUrl    String? @map("certificate_of_origin_url")
+  phytosanitaryCertificateUrl String? @map("phytosanitary_certificate_url")
+  billOfLadingUrl           String? @map("bill_of_lading_url")
+  insuranceCertificateUrl   String? @map("insurance_certificate_url")
+  otherDocuments            String? @map("other_documents") // JSON array
+
+  // Internal Tracking
+  assignedTo       String?   @map("assigned_to")
+  source           String?   // Website, Email, WhatsApp, Phone, Referral
+  notes            String?
+  followUpDate     DateTime? @map("follow_up_date")
+  lastContactDate  DateTime? @map("last_contact_date")
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime  @updatedAt @map("updated_at")
+  createdBy        String?   @map("created_by")
+  updatedBy        String?   @map("updated_by")
+
+  // Relations
+  lineItems OrderLineItem[]
+  paymentHistory PaymentHistory[]
+  communications OrderCommunication[]
+  activityLogs OrderActivityLog[]
+
+  @@map("orders")
+}
+
+// Order Activity Log Model
+model OrderActivityLog {
+  id          Int      @id @default(autoincrement())
+  orderId     Int      @map("order_id")
+  actionType  String   @map("action_type") // Status Changed, Payment Added, Document Uploaded, Product Modified, etc.
+  description String   // Detailed description of the action
+  fieldName   String?  @map("field_name") // Name of the field that changed
+  oldValue    String?  @map("old_value") // Previous value
+  newValue    String?  @map("new_value") // New value
+  performedBy String   @map("performed_by") // User who made the change
+  timestamp   DateTime @default(now())
+  metadata    String?  // JSON for additional data
+
+  // Relations
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("order_activity_logs")
+}
+
+// Order Communication Model
+model OrderCommunication {
+  id                Int      @id @default(autoincrement())
+  orderId           Int      @map("order_id")
+  communicationType String   @map("communication_type") // Email, Phone, WhatsApp, Meeting, Video Call
+  direction         String   // Inbound, Outbound
+  dateTime          DateTime @default(now()) @map("date_time")
+  subject           String?
+  summary           String?
+  fullContent       String?  @map("full_content")
+  attachments       String?  // JSON array of file URLs
+  emailTemplate     String?  @map("email_template") // Quote, Order Confirmation, Shipping Notification, etc.
+  sentTo            String?  @map("sent_to")
+  loggedBy          String?  @map("logged_by")
+  createdAt         DateTime @default(now()) @map("created_at")
+
+  // Relations
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("order_communications")
+}
+
+// Payment History Model
+model PaymentHistory {
+  id              Int      @id @default(autoincrement())
+  orderId         Int      @map("order_id")
+  paymentDate     DateTime @map("payment_date")
+  amount          Float
+  paymentMethod   String   @map("payment_method") // Bank Transfer, Credit Card, PayPal, Cash, Cheque, etc.
+  referenceNumber String?  @map("reference_number")
+  receivedBy      String?  @map("received_by")
+  notes           String?
+  createdAt       DateTime @default(now()) @map("created_at")
+  createdBy       String?  @map("created_by")
+
+  // Relations
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("payment_history")
+}
+
+// Order Line Items Model
+model OrderLineItem {
+  id            Int     @id @default(autoincrement())
+  orderId       Int     @map("order_id")
+  productId     Int?    @map("product_id")
+  productName   String  @map("product_name")
+  productCode   String? @map("product_code")
+  quantity      Float
+  unit          String  // kg, MT, pieces, etc.
+  unitPrice     Float   @map("unit_price")
+  totalPrice    Float   @map("total_price")
+  specifications String? // JSON - custom requirements
+  vendorId      Int?    @map("vendor_id")
+  vendorCost    Float?  @default(0) @map("vendor_cost")
+  margin        Float?  @default(0) // Profit margin percentage
+
+  // Relations
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@map("order_line_items")
+}
+
+// Client Management (CRM) Model
+model Client {
+  // Basic Information
+  id              Int      @id @default(autoincrement())
+  clientCode      String   @unique @map("client_code")
+  clientType      String   @map("client_type") // Lead, Prospect, Active Client, Inactive Client
+  companyName     String   @map("company_name")
+  contactPerson   String   @map("contact_person")
+  designation     String?
+  status          String   @default("Active") // Active, Inactive, Blacklisted
+  leadScore       Int?     @default(0) @map("lead_score") // 0-100
+  dateAdded       DateTime @default(now()) @map("date_added")
+  lastUpdated     DateTime @updatedAt @map("last_updated")
+
+  // Contact Information
+  emailPrimary    String   @map("email_primary")
+  emailSecondary  String?  @map("email_secondary")
+  phonePrimary    String   @map("phone_primary")
+  phoneSecondary  String?  @map("phone_secondary")
+  whatsapp        String?
+  website         String?
+  linkedin        String?
+  addressLine1    String?  @map("address_line1")
+  addressLine2    String?  @map("address_line2")
+  city            String?
+  stateProvince   String?  @map("state_province")
+  country         String?
+  postalCode      String?  @map("postal_code")
+  timezone        String?
+
+  // Business Details
+  industry                String?
+  companySize             String?  @map("company_size")
+  annualRevenueEstimate   Float?   @default(0) @map("annual_revenue_estimate")
+  taxId                   String?  @map("tax_id")
+  businessRegistrationNumber String? @map("business_registration_number")
+  paymentTermsPreferred   String?  @map("payment_terms_preferred")
+  creditLimit             Float?   @default(0) @map("credit_limit")
+  currencyPreferred       String?  @default("USD") @map("currency_preferred")
+
+  // Lead Information
+  leadSource          String?   @map("lead_source")
+  leadStatus          String?   @map("lead_status") // New, Contacted, Qualified, Proposal Sent, Negotiation, Won, Lost
+  leadTemperature     String?   @map("lead_temperature") // Hot, Warm, Cold
+  probabilityToClose  Int?      @default(0) @map("probability_to_close") // 0-100%
+  expectedCloseDate   DateTime? @map("expected_close_date")
+  expectedOrderValue  Float?    @default(0) @map("expected_order_value")
+  lostReason          String?   @map("lost_reason")
+  competitorName      String?   @map("competitor_name")
+
+  // Products & Preferences (JSON)
+  productsInterestedIn    String? @map("products_interested_in") // JSON array
+  preferredPackaging      String? @map("preferred_packaging")
+  certificationsRequired  String? @map("certifications_required") // JSON array
+  qualityStandards        String? @map("quality_standards")
+  typicalOrderQuantity    String? @map("typical_order_quantity")
+  orderFrequency          String? @map("order_frequency")
+
+  // Relationship Metrics
+  totalOrders             Int      @default(0) @map("total_orders")
+  totalRevenue            Float    @default(0) @map("total_revenue")
+  averageOrderValue       Float    @default(0) @map("average_order_value")
+  firstOrderDate          DateTime? @map("first_order_date")
+  lastOrderDate           DateTime? @map("last_order_date")
+  daysSinceLastOrder      Int?     @default(0) @map("days_since_last_order")
+  outstandingBalance      Float    @default(0) @map("outstanding_balance")
+  creditDaysAverage       Int?     @default(0) @map("credit_days_average")
+  paymentReliabilityScore Int?     @default(0) @map("payment_reliability_score") // 1-5
+
+  // Engagement Tracking
+  lastContactDate     DateTime? @map("last_contact_date")
+  lastContactType     String?   @map("last_contact_type")
+  nextFollowUpDate    DateTime? @map("next_follow_up_date")
+  followUpNotes       String?   @map("follow_up_notes")
+  totalInteractions   Int       @default(0) @map("total_interactions")
+  emailOpenRate       Float?    @default(0) @map("email_open_rate")
+  responseRate        Float?    @default(0) @map("response_rate")
+
+  // Internal Notes
+  notes           String?
+  strengths       String?
+  concerns        String?
+  decisionMakers  String? @map("decision_makers") // JSON array
+  assignedTo      String? @map("assigned_to")
+  tags            String? // JSON array
+
+  @@map("clients")
+}
+
+// Communication Log Model
+model CommunicationLog {
+  id                Int      @id @default(autoincrement())
+  clientId          Int      @map("client_id")
+  communicationType String   @map("communication_type") // Email, Phone, WhatsApp, Meeting, Video Call
+  direction         String   // Inbound, Outbound
+  dateTime          DateTime @default(now()) @map("date_time")
+  subject           String?
+  summary           String?
+  fullContent       String?  @map("full_content")
+  attachments       String?  // JSON array of file URLs
+  outcome           String?  // Positive, Neutral, Negative, Follow-up Required
+  nextAction        String?  @map("next_action")
+  loggedBy          String?  @map("logged_by")
+  createdAt         DateTime @default(now()) @map("created_at")
+
+  @@map("communication_logs")
+}
+
+// Client Document Model
+model ClientDocument {
+  id          Int      @id @default(autoincrement())
+  clientId    Int      @map("client_id")
+  fileName    String   @map("file_name")
+  fileSize    Int      @map("file_size") // in bytes
+  fileType    String   @map("file_type") // mime type
+  filePath    String   @map("file_path") // storage path
+  category    String   // Contracts, Certificates, Invoices, Proposals, Other
+  uploadDate  DateTime @default(now()) @map("upload_date")
+  uploadedBy  String?  @map("uploaded_by")
+  description String?
+
+  @@map("client_documents")
+}
+
+// Client Note Model
+model ClientNote {
+  id          Int      @id @default(autoincrement())
+  clientId    Int      @map("client_id")
+  category    String   // General, Strengths, Concerns, Meeting notes, Call notes
+  noteText    String   @map("note_text")
+  createdBy   String?  @map("created_by")
+  createdDate DateTime @default(now()) @map("created_date")
+  updatedDate DateTime @updatedAt @map("updated_date")
+
+  @@map("client_notes")
+}
+
+// Activity Log Model
+model ActivityLog {
+  id          Int      @id @default(autoincrement())
+  clientId    Int      @map("client_id")
+  actionType  String   @map("action_type") // Client created, Details updated, Status changed, Order placed, etc.
+  description String   // Detailed description of the action
+  performedBy String   @map("performed_by")
+  timestamp   DateTime @default(now())
+  metadata    String?  // JSON for additional data
+
+  @@map("activity_logs")
+}
+
+// Product Model
+model Product {
+  id                    Int      @id @default(autoincrement())
+  productCode           String   @unique @map("product_code") // SKU
+  productName           String   @map("product_name")
+  productNameScientific String?  @map("product_name_scientific")
+  category              String
+  subcategory           String?
+  status                String   @default("Active") // Active, Inactive, Out of Stock, Discontinued
+  featured              Boolean  @default(false)
+  
+  // Descriptions
+  shortDescription      String?  @map("short_description")
+  longDescription       String?  @map("long_description")
+  metaDescription       String?  @map("meta_description")
+  metaKeywords          String?  @map("meta_keywords")
+  seoTitle              String?  @map("seo_title")
+  slug                  String?  @unique
+  
+  // Specifications (stored as JSON)
+  specifications        String?  // JSON: botanical_name, part_used, form, color, etc.
+  
+  // Pricing
+  costPrice             Float    @map("cost_price")
+  sellingPrice          Float    @map("selling_price")
+  currency              String   @default("USD")
+  unit                  String   // kg, MT, liter, piece
+  moq                   Int      @default(1) // Minimum Order Quantity
+  marginPercentage      Float?   @map("margin_percentage")
+  bulkPricing           String?  @map("bulk_pricing") // JSON array
+  
+  // Inventory
+  currentStock          Float    @default(0) @map("current_stock")
+  stockUnit             String   @default("kg") @map("stock_unit")
+  reorderLevel          Float?   @map("reorder_level")
+  maxStockLevel         Float?   @map("max_stock_level")
+  warehouseLocation     String?  @map("warehouse_location")
+  
+  // Vendor Information
+  primaryVendorId       Int?     @map("primary_vendor_id")
+  vendorProductCode     String?  @map("vendor_product_code")
+  vendorLeadTimeDays    Int?     @map("vendor_lead_time_days")
+  
+  // Packaging & Certifications
+  packagingOptions      String?  @map("packaging_options") // JSON
+  certifications        String?  // JSON array
+  hsCode                String?  @map("hs_code")
+  
+  // Quality & Testing
+  qualityTestsPerformed String?  @map("quality_tests_performed") // JSON array
+  qualityCertificateUrl String?  @map("quality_certificate_url")
+  coaTemplateUrl        String?  @map("coa_template_url") // Certificate of Analysis
+  testReportUrl         String?  @map("test_report_url")
+  
+  // Additional Compliance
+  casNumber             String?  @map("cas_number")
+  fssaiApproved         Boolean  @default(false) @map("fssai_approved")
+  fdaApproved           Boolean  @default(false) @map("fda_approved")
+  euCompliant           Boolean  @default(false) @map("eu_compliant")
+  
+  // Images & Media
+  images                String?  // JSON array of image URLs
+  thumbnailUrl          String?  @map("thumbnail_url")
+  videoUrl              String?  @map("video_url")
+  brochureUrl           String?  @map("brochure_url")
+  
+  // Website Integration
+  publishedOnWebsite    Boolean  @default(false) @map("published_on_website")
+  websiteUrl            String?  @map("website_url")
+  pageViews             Int      @default(0) @map("page_views")
+  inquiriesCount        Int      @default(0) @map("inquiries_count")
+  ordersCount           Int      @default(0) @map("orders_count")
+  
+  // Performance Metrics
+  totalQuantitySold     Float    @default(0) @map("total_quantity_sold")
+  totalRevenue          Float    @default(0) @map("total_revenue")
+  averageOrderQuantity  Float?   @map("average_order_quantity")
+  lastSoldDate          DateTime? @map("last_sold_date")
+  popularityScore       Int      @default(0) @map("popularity_score")
+  
+  // Timestamps
+  dateAdded             DateTime @default(now()) @map("date_added")
+  lastUpdated           DateTime @updatedAt @map("last_updated")
+
+  @@map("products")
+}
+
+// Product Category Model
+model ProductCategory {
+  id           Int      @id @default(autoincrement())
+  categoryName String   @unique @map("category_name")
+  categorySlug String   @unique @map("category_slug")
+  description  String?
+  imageUrl     String?  @map("image_url")
+  sortOrder    Int      @default(0) @map("sort_order")
+  status       String   @default("Active") // Active, Inactive
+  productCount Int      @default(0) @map("product_count")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("product_categories")
+}
+
+// Product Subcategory Model
+model ProductSubcategory {
+  id              Int      @id @default(autoincrement())
+  categoryId      Int      @map("category_id")
+  subcategoryName String   @map("subcategory_name")
+  subcategorySlug String   @unique @map("subcategory_slug")
+  description     String?
+  imageUrl        String?  @map("image_url")
+  sortOrder       Int      @default(0) @map("sort_order")
+  status          String   @default("Active") // Active, Inactive
+  productCount    Int      @default(0) @map("product_count")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@map("product_subcategories")
+}
+
+// Saved Search Model (for Orders)
+model SavedSearch {
+  id          Int      @id @default(autoincrement())
+  name        String   // User-friendly name for the search
+  description String?  // Optional description
+  module      String   @default("orders") // orders, clients, vendors, products
+  filters     String   // JSON object containing filter criteria
+  createdBy   String   @map("created_by")
+  isPublic    Boolean  @default(false) @map("is_public") // If true, visible to all users
+  usageCount  Int      @default(0) @map("usage_count") // Track how often it's used
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("saved_searches")
+}
+
+// Vendor Payment Model
+model VendorPayment {
+  id                Int      @id @default(autoincrement())
+  vendorId          Int      @map("vendor_id")
+  paymentDate       DateTime @map("payment_date")
+  amount            Float
+  currency          String   @default("USD")
+  paymentMethod     String   @map("payment_method") // Bank Transfer, Cash, Cheque, UPI, etc.
+  referenceNumber   String?  @map("reference_number")
+  invoiceNumber     String?  @map("invoice_number")
+  orderId           Int?     @map("order_id") // Optional link to specific order
+  orderNumber       String?  @map("order_number")
+  notes             String?
+  balanceAfter      Float    @map("balance_after") // Outstanding balance after this payment
+  paymentStatus     String   @default("Completed") @map("payment_status") // Completed, Pending, Failed, Cancelled
+  recordedBy        String   @map("recorded_by")
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  @@map("vendor_payments")
+}
+
+// Vendor Document Model
+model VendorDocument {
+  id              Int      @id @default(autoincrement())
+  vendorId        Int      @map("vendor_id")
+  documentName    String   @map("document_name")
+  documentType    String   @map("document_type") // Contract, Certificate, Invoice, License, Tax Document, etc.
+  fileUrl         String   @map("file_url")
+  fileName        String   @map("file_name")
+  fileSize        Int      @map("file_size") // Size in bytes
+  mimeType        String   @map("mime_type")
+  uploadDate      DateTime @default(now()) @map("upload_date")
+  expiryDate      DateTime? @map("expiry_date")
+  description     String?
+  uploadedBy      String   @map("uploaded_by")
+  tags            String?  // JSON array of tags
+  isActive        Boolean  @default(true) @map("is_active")
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+
+  @@map("vendor_documents")
+}
+
+// Vendor Note Model
+model VendorNote {
+  id          Int      @id @default(autoincrement())
+  vendorId    Int      @map("vendor_id")
+  noteText    String   @map("note_text") // Can store HTML for rich text
+  createdBy   String   @map("created_by")
+  isPinned    Boolean  @default(false) @map("is_pinned")
+  isImportant Boolean  @default(false) @map("is_important")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("vendor_notes")
+}
+
+// Vendor Activity Log Model
+model VendorActivityLog {
+  id          Int      @id @default(autoincrement())
+  vendorId    Int      @map("vendor_id")
+  actionType  String   @map("action_type") // Created, Updated, Order Placed, Payment Received, Document Uploaded, Note Added, etc.
+  actionBy    String   @map("action_by")
+  details     String?  // JSON object with change details
+  ipAddress   String?  @map("ip_address")
+  userAgent   String?  @map("user_agent")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@map("vendor_activity_logs")
+}
+
+// Vendor Rating History Model
+model VendorRatingHistory {
+  id                      Int      @id @default(autoincrement())
+  vendorId                Int      @map("vendor_id")
+  rating                  Float
+  previousRating          Float?   @map("previous_rating")
+  ratingType              String   @map("rating_type") // Manual, Automatic
+  onTimeDeliveryPercent   Float?   @map("on_time_delivery_percent")
+  qualityRejectionRate    Float?   @map("quality_rejection_rate")
+  communicationScore      Float?   @map("communication_score")
+  totalOrders             Int?     @map("total_orders")
+  notes                   String?
+  ratedBy                 String   @map("rated_by")
+  createdAt               DateTime @default(now()) @map("created_at")
+
+  @@map("vendor_rating_history")
+}
+
+// Vendor Performance Metrics Model
+model VendorPerformanceMetrics {
+  id                      Int      @id @default(autoincrement())
+  vendorId                Int      @unique @map("vendor_id")
+  totalOrders             Int      @default(0) @map("total_orders")
+  completedOrders         Int      @default(0) @map("completed_orders")
+  onTimeDeliveries        Int      @default(0) @map("on_time_deliveries")
+  lateDeliveries          Int      @default(0) @map("late_deliveries")
+  qualityAccepted         Int      @default(0) @map("quality_accepted")
+  qualityRejected         Int      @default(0) @map("quality_rejected")
+  responseTimeAvg         Float?   @map("response_time_avg") // in hours
+  lastCalculated          DateTime @default(now()) @map("last_calculated")
+  updatedAt               DateTime @updatedAt @map("updated_at")
+
+  @@map("vendor_performance_metrics")
+}
+
+// Payment Received Model (Income Tracking)
+model PaymentReceived {
+  // Basic Information
+  id             Int      @id @default(autoincrement())
+  paymentNumber  String   @unique @map("payment_number") // e.g., "PAY-IN-2025-001"
+  paymentDate    DateTime @map("payment_date")
+  paymentType    String   @map("payment_type") // Advance, Balance, Full Payment, Refund
+  status         String   @default("Pending") // Pending, Received, Cleared, Bounced
+
+  // Client & Order Information
+  clientId       Int?     @map("client_id")
+  clientName     String   @map("client_name") // Denormalized
+  orderId        Int?     @map("order_id")
+  orderNumber    String?  @map("order_number")
+  invoiceNumber  String?  @map("invoice_number")
+
+  // Payment Details
+  amount         Float
+  currency       String   @default("USD")
+  exchangeRate   Float?   @default(1) @map("exchange_rate")
+  amountInInr    Float    @map("amount_in_inr")
+  paymentMethod  String   @map("payment_method") // Wire Transfer, LC, PayPal, Cash, Cheque, etc.
+  referenceNumber String? @map("reference_number")
+  bankAccount    String?  @map("bank_account") // Which account received payment
+
+  // Additional Information
+  notes          String?
+  receiptUrl     String?  @map("receipt_url")
+  bankStatementUrl String? @map("bank_statement_url")
+  receivedBy     String   @map("received_by")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@map("payments_received")
+}
+
+// Payment Made Model (Official Expenses)
+model PaymentMade {
+  // Basic Information
+  id             Int      @id @default(autoincrement())
+  expenseNumber  String   @unique @map("expense_number") // e.g., "PAY-OUT-2025-001"
+  expenseDate    DateTime @map("expense_date")
+  expenseCategory String  @map("expense_category") // Vendor Payment, Salary, Rent, Utilities, Transport, Marketing, etc.
+  expenseType    String   @map("expense_type") // Official, Recurring, One-time
+  status         String   @default("Pending") // Pending, Paid, Cancelled
+
+  // Vendor/Payee Information
+  vendorId       Int?     @map("vendor_id")
+  payeeName      String   @map("payee_name")
+  orderId        Int?     @map("order_id")
+
+  // Payment Details
+  amount         Float
+  currency       String   @default("INR")
+  amountInInr    Float    @map("amount_in_inr")
+  paymentMethod  String   @map("payment_method") // Bank Transfer, Cash, Cheque, UPI, etc.
+  referenceNumber String? @map("reference_number")
+  bankAccount    String?  @map("bank_account") // Which account paid from
+  invoiceNumber  String?  @map("invoice_number")
+
+  // Tax & Accounting
+  taxDeductible  Boolean  @default(false) @map("tax_deductible")
+  gstAmount      Float?   @default(0) @map("gst_amount")
+  tdsAmount      Float?   @default(0) @map("tds_amount")
+  accountingCategory String? @map("accounting_category")
+
+  // Additional Information
+  notes          String?
+  receiptUrl     String?  @map("receipt_url")
+  invoiceUrl     String?  @map("invoice_url")
+  paidBy         String   @map("paid_by")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@map("payments_made")
+}
+
+// Unofficial Expenses Model (SECURE - Bribes/Facilitation Payments)
+model UnofficialExpense {
+  // Basic Information
+  id             Int      @id @default(autoincrement())
+  expenseCode    String   @unique @map("expense_code") // Code name, e.g., "UE-001"
+  expenseDate    DateTime @map("expense_date")
+  category       String   // Customs, Police, Government Official, Inspector, License, Other
+  status         String   @default("Paid") // Paid, Pending
+
+  // Payment Details
+  amount         Float
+  currency       String   @default("INR")
+  amountInInr    Float    @map("amount_in_inr")
+  paymentMethod  String   @default("Cash") @map("payment_method")
+
+  // Context (Encrypted fields - will be encrypted at application level)
+  purpose        String   // Why payment was made - encrypted
+  recipientCode  String   @map("recipient_code") // Code name for recipient - encrypted
+  location       String?  // Where payment was made - encrypted
+  relatedOrderId Int?     @map("related_order_id")
+  relatedShipment String? @map("related_shipment")
+
+  // Security
+  notes          String?  // Encrypted notes
+  createdAt      DateTime @default(now()) @map("created_at")
+  lastAccessed   DateTime @default(now()) @map("last_accessed")
+  accessLog      String?  @map("access_log") // Encrypted log of access
+
+  @@map("unofficial_expenses")
+}
+
+// Bank Accounts Model
+model BankAccount {
+  id             Int      @id @default(autoincrement())
+  accountName    String   @map("account_name") // e.g., "HDFC Current Account"
+  accountNumber  String   @map("account_number") // Encrypted
+  bankName       String   @map("bank_name")
+  branch         String?
+  ifscCode       String?  @map("ifsc_code")
+  accountType    String   @map("account_type") // Current, Savings, Foreign Currency
+  currency       String   @default("INR")
+  openingBalance Float    @default(0) @map("opening_balance")
+  currentBalance Float    @default(0) @map("current_balance") // Auto-calculated
+  status         String   @default("Active") // Active, Inactive
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@map("bank_accounts")
+}
+
+// Blog Posts Model (Website Content Management)
+model BlogPost {
+  id              Int      @id @default(autoincrement()) @map("post_id")
+  title           String
+  slug            String   @unique // URL-friendly
+  content         String   // Rich text/Markdown
+  excerpt         String?  // Short summary
+  featuredImageUrl String? @map("featured_image_url")
+  
+  // Author & Categorization
+  authorId        Int?     @map("author_id") // User ID
+  authorName      String?  @map("author_name") // Denormalized
+  category        String   // Industry News, Product Guide, Export Tips, Success Stories, etc.
+  tags            String?  // JSON array
+  
+  // Publishing
+  status          String   @default("Draft") // Draft, Published, Scheduled, Archived
+  publishedDate   DateTime? @map("published_date")
+  scheduledDate   DateTime? @map("scheduled_date")
+  
+  // SEO
+  metaTitle       String?  @map("meta_title")
+  metaDescription String?  @map("meta_description")
+  
+  // Analytics
+  viewsCount      Int      @default(0) @map("views_count")
+  
+  // Timestamps
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  
+  @@map("blog_posts")
+}
+
+// Lead Forms Model (Website Lead Capture)
+model LeadForm {
+  id                 Int      @id @default(autoincrement()) @map("lead_id")
+  formType           String   @map("form_type") // Contact, Quote Request, Sample Request, Newsletter
+  
+  // Contact Information
+  name               String
+  email              String
+  phone              String?
+  company            String?
+  country            String?
+  
+  // Inquiry Details
+  message            String?
+  productsInterested String?  @map("products_interested") // JSON array
+  sourcePage         String?  @map("source_page") // Which page form was submitted from
+  
+  // Lead Management
+  status             String   @default("New") // New, Contacted, Converted, Closed, Spam
+  assignedTo         Int?     @map("assigned_to") // User ID
+  
+  // Tracking
+  submittedAt        DateTime @default(now()) @map("submitted_at")
+  ipAddress          String?  @map("ip_address")
+  userAgent          String?  @map("user_agent")
+  
+  // Follow-up
+  notes              String?
+  followUpDate       DateTime? @map("follow_up_date")
+  convertedToClientId Int?    @map("converted_to_client_id")
+  
+  @@map("lead_forms")
+}
+
+// Media Library Model (Website Assets Management)
+model MediaLibrary {
+  id          Int      @id @default(autoincrement()) @map("media_id")
+  fileName    String   @map("file_name")
+  fileUrl     String   @map("file_url")
+  fileType    String   @map("file_type") // Image, PDF, Video, Document
+  fileSize    Int      @map("file_size") // Size in bytes
+  
+  // Image-specific
+  dimensions  String?  // JSON: {width, height}
+  altText     String?  @map("alt_text")
+  
+  // Metadata
+  title       String?
+  description String?
+  uploadedBy  Int?     @map("uploaded_by") // User ID
+  uploadedAt  DateTime @default(now()) @map("uploaded_at")
+  
+  // Usage Tracking
+  usedIn      String?  @map("used_in") // JSON array of pages/posts using this media
+  usageCount  Int      @default(0) @map("usage_count")
+  
+  // Organization
+  folder      String?  @default("Uncategorized")
+  tags        String?  // JSON array
+  
+  @@map("media_library")
+}
+

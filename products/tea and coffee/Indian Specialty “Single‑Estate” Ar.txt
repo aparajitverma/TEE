@@ -1,0 +1,140 @@
+Indian Specialty “Single‑Estate” Arabica Green Coffee Beans
+
+Indian Specialty “Single‑Estate” Arabica Green‑Coffee‑Bean Export Guide
+From the shade‑grown plantation to the roaster’s bag – a step‑by‑step play‑book for Indian exporters
+
+Who should use this?
+
+Estate owners, contract growers, or processing hubs that have a single‑estate, high‑altitude Arabica operation (e.g., Coorg, Chikmagalur, Nilgiri, Araku, Wayanad).
+Companies that already have a wet‑process (washed) facility or plan to contract it out.
+What is covered?
+
+Legal & certification foundations
+Agronomy & harvest management
+Processing (wet and optional dry)
+Laboratory quality assurance
+Packaging, preservation & labelling
+Export documentation & customs
+Freight & logistics
+Market‑entry & after‑sales
+Quick‑start checklist
+1️⃣ Legal & Certification Foundations
+Requirement	How to Obtain	Frequency / Renewal
+IEC (Import‑Export Code)	Apply on DGFT – IEC portal (2‑3 days).	Permanent (update if PAN/GST changes).
+APEDA Export Licence	Submit PAN, GST, IEC, bank details, estate details.	5‑year licence (renewable).
+FSSAI Food‑Safety License	Register under Food Business Operator (FBO) category.	Annual renewal.
+NPOP – Indian Food‑Safety Standard for Coffee	Comply with pesticide‑residue, aflatoxin, heavy‑metal limits. Testing in NABL‑accredited lab.	Annual audit/report.
+ISO 22000 / ISO 9001	QMS implementation; engage registrar (SGS, BV, DNV).	3‑year certificate, annual surveillance.
+Organic (APEDA‑Organic) – optional	Convert estate, maintain 2 yr conversion, get APEDA‑Organic certificate.	1‑yr audit.
+Fair‑Trade / Rainforest Alliance – optional	Apply via certifying body; provide farmer‑level records, traceability.	1‑yr audit.
+Phytosanitary Certificate	Apply through APEDA – Plant Quarantine after packing. Valid ≤ 30 days.	Per shipment.
+Certificate of Origin (CO)	Chamber of Commerce (e.g., Calcutta Chamber). Must cite IEC.	Per shipment.
+Letter of Credit (LC)	Agree with buyer; attach CoA, Phytosanitary, CO.	Per shipment.
+2️⃣ Agronomy – From Seedling to Cherry
+Stage	Technical Parameters	Best‑Practice Checklist
+Varietal selection	Arabica Coffea arabica – ‘Typica’, ‘Caturra’, ‘Bourbon’, ‘Mundo Novo’, or local selections (e.g., AR‑Ramersa).	Source seedlings from ICAR‑NBRI or certified nurseries; keep a clone‑register.
+Altitude & Climate	1 200 – 1 800 m ASL; mean annual temperature 18‑22 °C; 1 500‑2 500 mm rainfall; well‑drained volcanic or lateritic soils; pH 5.5‑6.5.	Conduct soil‑profile analysis; apply organic compost (5‑8 t ha⁻¹) + N‑PK (40‑30‑40 kg ha⁻¹).
+Shade‑tree system	30‑50 % canopy cover (Eucalyptus, Grevillea, Albizia).	Record shade‑tree species; maintain biodiversity logs (required for Fair‑Trade).
+Irrigation	Drip or micro‑sprinkler, 0.6‑0.8 L m⁻² day⁻¹ during dry spells.	Install soil‑moisture sensors; schedule via IoT platform.
+Pest‑Disease Management	Main threats: Coffee Berry Borer (Hypothenemus hampei), Coffee Leaf Rust (Hemileia vastatrix), Root‑Knot Nematodes.	Apply IPM – Trichoderma‑based bio‑fungicides, pheromone traps for borer, neem‑based miticides. Keep a pesticide‑use log; ensure residues < NPOP MRL.
+Planting density	1 600‑2 000 plants ha⁻¹ (spacing 2 × 2 m).	Mark each plot with GPS coordinates.
+Harvest timing	Selective hand‑picking of ripe red cherries (≈ 75 % red, 25 % green) during single‑crop season (Oct‑Feb for most south‑Indian estates).	Use hand‑held barcode scanners to capture plot‑ID, pick‑time, picker‑ID.
+Post‑harvest handling	Load cherries in ventilated bamboo baskets, transport to processing within 1 h to avoid over‑ripe fermentation.	Record time‑in‑transit on batch sheet.
+Traceability	Batch‑Lot ID: SA‑AR‑FL‑YYMM‑NN (e.g., SA-AR-FL-2404-01). QR‑code printed on each bag, linked to ERP/LIMS.	End‑to‑end digital traceability required for premium markets.
+3️⃣ Processing – From Cherry to Green Bean
+Process	Parameters (Wet/Washed)	Optional Dry (Natural)
+Reception & Sorting	Remove foreign material, underripe/overripe cherries. Mechanical sorter + manual hand‑picking.	Same – keep at 20‑25 °C, 70‑80 % RH to avoid premature drying.
+Pulping	Rotary pulper – 80‑90 % pulp removal, retaining mucilage. Pulp‑solids ≈ 12 % of fresh cherry weight.	Not required for natural/dry‑process.
+Fermentation (Mucilage removal)	Water‑fermentation tanks at 20‑22 °C, pH 5.5‑6.0, duration 12‑18 h (monitor by pulp‑solids index). Stir every 4 h.	Natural dry – cherries spread on raised beds, 20‑30 °C, 70‑80 % RH, 7‑12 days; turn daily.
+Washing	Counter‑current water flow, 2‑3 × volume of pulp, temperature 18‑20 °C.	Not applicable.
+Drying	Sun‑drying on raised concrete decks or mechanical dryer (forced‑air, 45‑50 °C) to 10‑12 % moisture (wet‑process) or 11‑12 % (dry). Target dry‑rate ≤ 2 % kg⁻¹ h⁻¹ to avoid bean‑fracture.	Same drying target but longer (12‑18 days) for natural process.
+Hulling	Mechanical huller – removes parchment; retains green bean at 11‑12 % moisture.	Same hulling after natural dry.
+Polishing (optional)	Polisher – removes silver skin; usually omitted for specialty beans to preserve flavor.	Same optional step.
+Grading	Screen‑sorting: < 15 mm (AA/AAA), 15‑18 mm (A), 18‑20 mm (B). Visual inspection for defects (black beans, insect damage). Target defect ≤ 5 %.	Same grading.
+Storage	Climate‑controlled warehouses at 10‑12 °C, 60‑65 % RH, oxygen‑reduced atmosphere (N₂ 1‑2 %).	Same storage.
+Batch traceability	Record lot‑ID, processing dates, fermentation time, drying curve, final moisture.	Same.
+Key Yield Benchmarks – From fresh cherry to green bean: 15‑18 % w/w (typical). For a 1 t cherry harvest, expect 150‑180 kg of export‑grade green beans.
+
+4️⃣ Laboratory Quality Assurance (QA)
+Parameter	Method (ISO/ASTM)	Specification – Single‑Estate Specialty
+Moisture (wet‑process)	ASTM D 4897‑13 (Karl‑Fischer).	11‑12 % ± 0.5 % (wet), 10‑12 % ± 0.5 % (dry).
+Physical size distribution	ASTM D 7615‑18 (sieve analysis).	AA ≥ 60 % ≥ 15 mm; A ≥ 30 % 13‑15 mm; B ≤ 10 % < 13 mm.
+Defect rate	Visual inspection per Specialty Coffee Association (SCA) protocol.	≤ 5 % total defects (black, insect‑damaged, mold).
+Cupping score	SCA cupping – 100‑point scale; target ≥ 86 for “specialty”.	Record score, flavor notes, acidity, body, after‑taste.
+Caffeine	HPLC (USP < 2171).	1.1‑1.5 % w/w (typical Arabica).
+Aflatoxin B1	ELISA (ISO 19075‑1).	≤ 5 µg kg⁻¹ (EU limit) – aim ≤ 2 µg kg⁻¹.
+Pesticide residues	LC‑MS/MS (NPOP).	Below each pesticide’s MRL; provide Residue‑Monitoring Report.
+Heavy metals (Pb, Cd, As, Hg)	ICP‑MS (ISO 17294‑2).	Pb ≤ 0.1 ppm; Cd ≤ 0.05 ppm; As ≤ 0.2 ppm; Hg ≤ 0.01 ppm.
+Microbial load	ISO 20776‑1 (Total Plate Count).	≤ 10³ CFU g⁻¹.
+Certificate of Analysis (CoA)	Generated per batch, signed by Head of QA, QR‑code links to full lab report (PDF‑A).	Must accompany every export shipment.
+5️⃣ Packaging, Preservation & Labelling
+Item	Specification	Reason
+Primary pack	PP‑lined jute bags (50 kg), inner poly‑liner (PE) for moisture barrier, ventilation holes (4 mm) on jute.	Allows breathability, prevents mold, complies with BIS IS 3024.
+Secondary pack	Four‑wall corrugated cartons (1800 × 1200 × 1000 mm) with corner protectors and inner foam inserts.	Shock protection for sea/rail.
+Label content (mandatory)	• Product: “Single‑Estate Arabica Green Coffee – Estate X, Coorg, India”.
+• Batch‑Lot ID (QR‑code).
+• Net weight, moisture %.
+• FSSAI licence No.
+• Certification logos (Organic, Fair‑Trade, Rainforest).
+• “For Roasting Only – Not for Direct Consumption”.	Satisfies BIS, EU, US packaging regulations.
+Barcoding / RFID	GS1‑128 linear barcode on each carton; optional UHF RFID tag for high‑value shipments.	Enables customs scan, buyer WMS integration.
+Preservation	Store at 10‑12 °C, 60‑65 % RH, oxygen‑reduced (~2 % N₂); include silica‑gel packets (0.3 % w/w) for > 30 day voyages.	Retains bean integrity & aroma precursors.
+Shelf‑life	24 months from packing when stored under specified conditions (validated by accelerated‑aging test ASTM D 7032).	Proven for specialty beans.
+6️⃣ Export Documentation (Complete Paper Trail)
+Document	Issuer	Core Details
+Commercial Invoice	Exporter	FOB/CIF price, HS‑code 0901 21 00, currency, payment terms, bank details.
+Packing List	Exporter	Bag numbers, batch‑lot IDs, net/gross weight, dimensions, seal number.
+Certificate of Origin (CO)	Chamber of Commerce (e.g., Calcutta Chamber)	IEC, APEDA licence, estate name, product description.
+Phytosanitary Certificate	APEDA – Plant Quarantine	Pest‑free confirmation; validity ≤ 30 days.
+Certificate of Analysis (CoA)	QA Lab (NABL‑accredited)	Moisture, size, defect %, cupping score, pesticide/metal test results.
+Material Safety Data Sheet (MSDS)	Exporter	GHS classification, handling & storage instructions.
+Letter of Credit (LC)	Buyer’s bank	Must reference invoice, CoA, Phytosanitary, CO.
+Insurance Certificate	Marine insurer (e.g., JCB Insurance)	“All Risks” covering loss, damage, moisture.
+Export Declaration (Shipping Bill)	Customs via ICEGATE	Generates Bill of Export (BE) number.
+FSSAI Import Permit (if buyer uses beans for functional foods)	FSSAI	Required for nutraceutical/food‑additive use.
+All PDFs should be PDF/A format, digitally signed, stored in a secure cloud DMS (SharePoint, DocuWare) with controlled access.
+
+7️⃣ Freight & Logistics
+Decision	Recommended Practice
+Incoterm	FOB (Mangaluru / Kochi Port) – standard for green coffee; CIF if buyer prefers freight & insurance handled by exporter.
+Transport mode	Sea freight – 20‑ft or 40‑ft HC containers (≈ 1 200 kg per 20‑ft, 2 000 kg per 40‑ft).
+For urgent samples, air freight (≤ 50 kg).
+Container loading	Place jute bags on 1200 × 1000 mm pallets, max height 1.2 m. Secure with strap‑bands; record seal number on packing list.
+Temperature & humidity	Not temperature‑critical, but keep < 30 °C and < 80 % RH to avoid bean sprouting/ mould. Include silica‑gel packets for voyages > 30 days.
+Tracking	GPS tracker on container; optional temperature logger (log readings every 4 h). Share live data via client portal.
+Customs (India)	Random inspection possible; have CoA, MSDS, Phytosanitary ready. Pay IGST (if applicable) and claim GST refund under Export Scheme.
+Customs (Destination)	Provide Bill of Lading, Invoice, CO, Phytosanitary, CoA, LC. Most major markets apply 0 % duty under HS 0901.00.
+Insurance	“All‑Risks” covering loss, theft, moisture damage – essential for premium specialty beans.
+Demurrage	Negotiate 5 free‑days with carrier; maintain a demurrage contingency fund (~US $1 000 per container).
+8️⃣ Market‑Entry & After‑Sales
+Activity	Practical Steps
+Brand story	Emphasise “Single‑Estate”, shade‑grown, high‑altitude, wet‑processed, SCA cupping ≥ 86. Use estate‑level video (QR‑code on label).
+Target buyers	• Specialty roasters (US, Europe, Japan, South‑Korea).
+• Third‑wave coffee chains (Starbucks Reserve, Blue Bottle).
+• Food‑tech & nutraceutical firms (for specialty extracts).
+Sample program	Send 5 kg of each lot in sealed PP‑lined bags, with digital CoA and cupping notes. Follow up within 48 h with a short feedback form.
+Pricing	Base price on Coffee Cost Index (CCI) + processing margin + premium for certifications (Organic, Fair‑Trade). Review quarterly.
+Trade shows	Specialty Coffee Expo (NYC), World Coffee Conference (Berlin), Coffee Asia (Hong Kong). Secure a booth with live QR‑code scanning of estate data.
+Digital presence	B2B portal (Alibaba, TradeIndia) with batch‑level traceability page; offer API feed for buyer’s inventory system.
+Risk mitigation	• Crop‑insurance via PMFBY (covers weather loss).
+• Price‑hedge through MCX Coffee Futures or OTC forwards with banks.
+After‑sales support	Provide roasting guidelines (e.g., Light‑Medium roast at 180‑200 °C, 9‑12 min). Offer cupping assistance (virtual or on‑site).
+Re‑order cycle	Typical 12‑month harvest cycle; maintain a pipeline forecast with buyers to align processing capacity.
+9️⃣ Quick‑Start Export Checklist (Print‑Ready)
+✅	Item	Remarks
+1	IEC & APEDA Export Licence active	Upload to cloud DMS.
+2	Estate registered under single‑estate, high‑altitude Arabica (GPS‑tagged plots)	Verify altitude & shade‑tree records.
+3	Harvest calendar for Oct‑Feb (single‑crop) in place	Align with buyer lead‑times.
+4	Processing plant ISO 22000 / ISO 9001 certified	Internal audit within 30 days.
+5	Batch CoA generated (moisture, size, cupping score, residues)	Signed by QA Head; QR‑code attached.
+6	Primary (jute‑bag) & secondary (corrugated) packaging compliant	Barcode & RFID affixed.
+7	Phytosanitary Certificate obtained (valid ≥ 30 days)	Confirm with APEDA.
+8	Certificate of Origin issued by Chamber	Include IEC & estate name.
+9	Commercial Invoice, Packing List, LC, Insurance ready	PDFs stored in Export folder.
+10	Freight forwarder booked; container sealed, seal number logged	GPS tracker installed.
+11	Export Declaration filed on ICEGATE (BE number generated)	Verify with customs broker.
+12	Post‑shipment follow‑up (buyer feedback, re‑order)	Record in CRM.
+📌 Bottom Line
+Exporting Indian Single‑Estate Arabica Green‑Coffee‑Beans is a premium‑value, high‑margin business that succeeds only when traceability, quality control, and certification are baked into every step—from the shade‑grown bush to the roaster’s bag. By following the roadmap above—legal clearances, meticulous agronomy, water‑process (or natural) handling, rigorous lab testing, compliant packaging, flawless paperwork, and reliable logistics—you will meet the demanding standards of specialty‑coffee roasters worldwide and protect the reputation of India’s high‑altitude coffee heritage.
+
+Good luck, and may your beans travel from the misty hills of India to the perfect cup abroad!

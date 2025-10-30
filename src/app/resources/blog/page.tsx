@@ -22,19 +22,31 @@ export default function Blog() {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
 
-  const categories = ['All', 'Market Trends', 'Buyer Guide', 'Quality Standards', 'Export Guide', 'Sustainability', 'Product Insights'];
+  const categories = ['All', 'Herbal & Ayurvedic', 'Aromatic Effluences', 'Tea & Coffee', 'Herbs & Spices', 'Export Guide', 'Quality Standards'];
 
   const allPosts: BlogPost[] = [
+    // Category Overview Posts
     {
-      id: 'ayurvedic-herbs-2024',
-      title: 'Top 10 Ayurvedic Herbs Driving Global Demand in 2024',
-      excerpt: 'Discover the most sought-after Ayurvedic herbs in international markets, their health benefits, and export opportunities for Indian suppliers.',
-      category: 'Market Trends',
-      author: 'Priya Sharma',
-      date: '2024-10-15',
-      readTime: '8 min read',
+      id: 'herbal-ayurvedic-export-guide-2024',
+      title: 'Complete Guide to Exporting Herbal & Ayurvedic Products from India 2024',
+      excerpt: 'Comprehensive export guide for Ashwagandha, Curcumin, Triphala, Neem Oil, and Kashmir Saffron. Learn about GMP certification, USDA Organic standards, FOB pricing, and target markets.',
+      category: 'Herbal & Ayurvedic',
+      author: 'Dr. Priya Sharma',
+      date: '2024-10-27',
+      readTime: '15 min read',
       image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&h=500&fit=crop',
-      tags: ['Ayurveda', 'Herbs', 'Market Analysis', 'Export Trends']
+      tags: ['Ayurveda', 'Herbal Export', 'GMP Certification', 'USDA Organic', 'Ashwagandha', 'Curcumin']
+    },
+    {
+      id: 'ashwagandha-root-extract-export-guide',
+      title: 'Ashwagandha Root Extract Export: 5-10% Withanolides, GMP Certified, FOB $45-80/kg',
+      excerpt: 'Import premium Ashwagandha from India with guaranteed 5-10% withanolides, HPLC verified. Full certifications (GMP, Organic, Halal), direct farm sourcing, flexible formats. Learn why to choose us.',
+      category: 'Herbal & Ayurvedic',
+      author: 'Dr. Priya Sharma',
+      date: '2024-10-27',
+      readTime: '12 min read',
+      image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&h=500&fit=crop',
+      tags: ['Ashwagandha', 'Withanolides', 'Adaptogen Export', 'GMP Certified', 'USDA Organic', 'Import Guide']
     },
     {
       id: 'choosing-indian-spices',
@@ -131,6 +143,10 @@ export default function Blog() {
 
   const getCategoryColor = (category: string) => {
     const colors: Record<string, string> = {
+      'Herbal & Ayurvedic': 'bg-green-500/20 text-green-400 border-green-500/30',
+      'Aromatic Effluences': 'bg-purple-500/20 text-purple-400 border-purple-500/30',
+      'Tea & Coffee': 'bg-amber-500/20 text-amber-400 border-amber-500/30',
+      'Herbs & Spices': 'bg-red-500/20 text-red-400 border-red-500/30',
       'Market Trends': 'bg-blue-500/20 text-blue-400 border-blue-500/30',
       'Buyer Guide': 'bg-green-500/20 text-green-400 border-green-500/30',
       'Quality Standards': 'bg-purple-500/20 text-purple-400 border-purple-500/30',

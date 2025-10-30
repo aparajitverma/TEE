@@ -1,0 +1,149 @@
+Rose Absolute
+
+Rose Absolute Export Guide – India
+From Farm to Fragrance House – A step‑by‑step playbook for Indian exporters of Rose Absolute (Rosa damascena / Rosa centifolia)
+
+Audience – Grower‑cooperatives, contract processors, and boutique exporters who already own or contract a solvent‑extraction plant.
+
+Scope – Complete value‑chain: cultivation → harvesting → extraction → quality control → export compliance → logistics → after‑sales.
+
+1. Pre‑Export Foundations
+Requirement	Why it matters	How to obtain / implement
+IEC (Import‑Export Code)	Mandatory for any foreign trade	Apply on DGFT – IEC portal (no fee).
+APEDA Registration	Access to export incentives, organic‑certification schemes, market‑development grants	Submit online with PAN, GST, IEC, bank details; obtain APEDA‑Export Licence.
+Bank LC Facility	Guarantees payment and reduces FX risk	Open an Export‑Advise LC with your bank; negotiate sight/U.S.‑tenor terms.
+HS Code	Determines duty & reporting	HS 3301.12.00 – “Rose absolute”.
+Regulatory Matrix	Destination markets (EU, US, GCC, Japan, Korea) have differing cosmetics/food‑flavour rules (REACH, FDA‑CFR, EU Cosmetic Regulation, etc.)	Build a spreadsheet: market → governing body → required docs (COA, REACH registration, safety dossier). Review quarterly.
+Organic / Fair‑Trade Certification (optional but market‑valued)	Premium pricing and GRI‑compliant supply chains	Register with APEDA‑Organic, India GAP, or private certifiers (e.g., Ecocert).
+Insurance	Covers loss, spoilage, or delayed shipment	Obtain All‑Risks marine cargo policy (CIF basis).
+2. Cultivation & Harvesting of Rose Petals
+Step	Technical Detail	Best‑Practice Checklist
+Cultivar	Rosa damascena ‘Mausul’ (Kashmir), Rosa centifolia ‘Pashupatinath’ (Uttar‑Pradesh) – high geraniol & citronellol.	Source certified planting material from ICAR‑NBRI or APEDA‑approved nurseries.
+Soil & Climate	Well‑drained loamy sand, pH 6.2‑6.8, night‑time temperature 15‑20 °C, daylight 24‑28 °C.	Conduct soil‑test before planting; amend with organic compost (2‑3 t ha⁻¹).
+Irrigation	Drip‑irrigation with 0.8 L m⁻² day⁻¹ during bud‑development.	Use soil‑moisture sensors (Capacitance type) for precise water‑use.
+Pest Management	IPM – use Bacillus thuringiensis, spinosad only when thresholds > 5 % leaf‑damage.	Maintain Pesticide Residue Log; avoid systemic chemicals that may appear in absolute.
+Flowering Cycle	60‑70 days after bud break; peak bloom early‑morning (5‑8 am) when oil content peaks.	Schedule harvest crew for pre‑dawn work.
+Petal Picking	Hand‑pick only fully opened blossoms; avoid damaged petals.	Use plastic‑tipped shears; collect in ventilated, shade‑covered crates to prevent wilting.
+Petal Yield	Approx. 1 kg fresh petals per 30 m²; fresh‑petal moisture 80‑85 %.	Record petal weight per hectare; target ≥ 12 t ha⁻¹ fresh.
+Traceability	Assign Batch‑Lot ID: ROSE‑IN‑YYMM‑NN, QR‑code on each crate, GPS‑tagged field.	Integrated with ERP for downstream traceability.
+3. Processing – Solvent Extraction (Absolute Production)
+Process	Critical Parameters	QC / Control Points
+Petal Conditioning	Cool to 15 °C, spread 10‑15 cm layer, air‑dry 2‑3 h to reach ~60 % moisture (reduces solvent usage).	Moisture meter; humidity log.
+Extraction Solvent	Hexane (analytical grade, 99.9 %) – 1 : 3 (petal : solvent) ratio by weight.	Verify solvent purity (GC‑FID) before use.
+Extraction Vessel	Stainless‑steel closed‑loop extractor, temperature 45‑55 °C, stirring 120 rpm, extraction time 4‑5 h.	Temperature & pressure transducers calibrated; solvent recirculation rate monitored.
+Solvent Recovery	Distillation column under reduced pressure (0.7 bar) at 60 °C; recover > 95 % hexane for reuse.	Record recovery %; ensure VOC emissions within Air‑Act limits.
+Concentration	Vacuum evaporation at 35‑40 °C to obtain “Concrete” (wax‑like residue).	Weight‑by‑weight; concrete yield ≈ 1.5‑2 % of fresh petal weight.
+Absolute Finalisation	Ethanol (95 % USP) added to concrete (1 : 4), stirred 30 min, filtered, ethanol removed by rotary evaporation (40 °C, 0.2 mbar) → Rose Absolute (viscous amber, characteristic “Rose” odor).	Residual solvent analysis (GC‑FID) – ethanol ≤ 0.5 % v/v, hexane ≤ 0.1 % v/v.
+Yield Benchmark	0.08‑0.15 % (w/w) absolute from fresh petals.	Compare batch yield to baseline; flag > 15 % deviation.
+Safety Note – Work in explosion‑proof rooms, wear anti‑static PPE, install solvent‑vapor detectors (LEL < 2 %).
+
+4. Laboratory Quality Assurance & Certification
+Test	Standard / Method	Acceptance Criteria
+GC‑MS (Fingerprint)	ISO 11024‑1 (Essential oils – GC‑MS).	Major markers: Citronellol ≥ 16 %, Geraniol ≥ 20 %, Phenylethyl Alcohol ≥ 30 %.
+Optical Rotation	ISO 9366‑1.	[α]D²⁰ = +30 ± 3° (typical range).
+Specific Gravity	ISO 4169.	0.98‑1.02 at 20 °C.
+Acid Value (AV)	ISO 12966‑2.	AV ≤ 5 mg KOH g⁻¹.
+Peroxide Value (PV)	ISO 3960.	PV ≤ 10 meq O₂ kg⁻¹.
+Residual Solvents (Hexane, Ethanol)	USP < 467 (Residual Solvents).	Hexane ≤ 10 ppm, Ethanol ≤ 500 ppm.
+Microbial Load	ISO 20776‑1.	≤ 10³ CFU g⁻¹.
+Heavy Metals (Pb, Cd, As, Hg)	ISO 17294‑2 (ICP‑MS).	Pb ≤ 0.1 ppm, Cd ≤ 0.05 ppm, As ≤ 0.2 ppm, Hg ≤ 0.01 ppm.
+Pesticide Residues	FSSAI & EU MRLs (via LC‑MS/MS).	All below legislated limits.
+Certificates	Certificate of Analysis (CoA), Material Safety Data Sheet (MSDS), optional Organic/ISO‑9001/ISO‑14001.	Issued by NABL‑accredited lab (e.g., CSIR‑IICT, NIPRD). Include full GC‑MS chromatogram, batch‑specific residual‑solvent chart.
+Digital QA Dashboard – Link Lab Management System (LIMS) with ERP so CoA fields auto‑populate on batch release.
+
+5. Packaging, Preservation & Labelling
+Requirement	Specification	Rationale
+Primary Container	Amber‑glass bottles (30 ml, 100 ml, 250 ml) with PTFE‑lined screw caps; LDPE‑lined HDPE (≥ 500 ml) for bulk.	UV protection, oxidation barrier; complies with ISO 16128‑1 for cosmetics.
+Secondary Package	Four‑wall corrugated cartons, inner foam inserts, sealed inside a poly‑bag (nitrogen‑flushed).	Shock‑absorption, moisture barrier for sea/road transport.
+Atmosphere Control	Nitrogen purge (≥ 95 % N₂) before sealing; silica‑gel packets (1 % w/w).	Extends shelf‑life (≥ 24 months).
+Label Content (per destination)	Product name, batch‑lot, net weight, production & expiry dates, CoA reference, IN‑PD‑i13 allergen disclaimer, ISO / APEDA logos, QR‑code linking to traceability page.	Aligns with BIS IS 3024, EU Regulation 1223/2009, US CFR 21.
+Barcoding / RFID	GS1‑128 linear barcode on each carton + optional RFID tag (UHF).	Enables customs scan and buyer WMS integration.
+Safety Data	MSDS prepared per GHS (pictograms, signal word, hazard statements).	Required by most customs & buyer safety teams.
+6. Export Documentation (The “Paper Trail”)
+Document	Issuer	Key Fields / Remarks
+Commercial Invoice	Exporter	Currency (USD/EUR), Incoterms (FOB/Ramgarh Port or CIF), HS‑code, total value, bank details.
+Packing List	Exporter	Detailed description, dimensions, gross/net weight, container numbers, seal numbers.
+Certificate of Origin (CO)	Chamber of Commerce (e.g., Delhi Chamber)	Must include IEC, APEDA licence, and if using GSP, mention preferential origin.
+Phytosanitary Certificate	APEDA/Plant Quarantine	Confirms that raw material (petals) is pest‑free.
+Certificate of Analysis (CoA) & MSDS	Accredited Lab	Batch‑specific GC‑MS data, residual‑solvent results, safety hazards.
+Export Declaration (Shipping Bill)	Customs via ICEGATE	Digital filing; generates Bill of Export (BE) number.
+Letter of Credit (LC)	Buyer’s bank	Must match invoice details; attach CoA & MSDS as required documents.
+Insurance Certificate	Marine insurer (e.g., JCB Insurance)	Covers All Risks (CIF).
+FSSAI Import Permit (if for food/flavour)	FSSAI	Required when absolute is to be used as a flavoring agent.
+REACH / EU Cosmetic Notification (if EU)	ECHA	Submit product under CPNP; keep registration number on file.
+Organic Certificate (if applicable)	APEDA‑Organic or private certifier	Attach to shipment for premium markets.
+Best Practice: Store all PDFs in a cloud‑based DMS with version control; grant read‑only access to buyer and logistics partners.
+
+7. Customs Clearance & Freight Forwarding
+Pre‑Shipping (India)
+
+Upload Shipping Bill on ICEGATE → obtain BE number.
+Book container (20‑ft or 40‑ft HC) with a NVOCC or Freight Forwarder (e.g., Allcargo, DP World).
+Ensure container is ISPM‑15 compliant (heat‑treated wood).
+Incoterms Decision
+
+FOB: Most buyers prefer; seller’s responsibility ends at Ramgarh/Port of Kolkata.
+CIF: Seller covers freight & insurance; useful for new or bulk buyers.
+Loading & Sealing
+
+Load cartons on pallets (max height 1.2 m), place seal number on shipping documents.
+Take photos of loaded container for proof of condition.
+Customs Examination (India)
+
+May be selected for random inspection. Present CoA, MSDS, Phytosanitary Cert on request.
+Export Clearance
+
+Pay IGST (if applicable) and claim refund under GST Export Scheme.
+Generate Electronic Export Manifest (EEM) for port authority.
+In‑Transit Monitoring
+
+GPS tracker on container; optionally temperature/humidity datalogger (if client requires ≤ 25 °C).
+Share live location & condition data with buyer via client portal.
+Port‑of‑Destination Clearance
+
+Buyer (or appointed broker) presents Bill of Lading, Invoice, CoA, MSDS, and REACH/Customs documents.
+Pay import duty (generally nil for HS 3301.12) plus local VAT/GST.
+Delivery to Client
+
+Arrange door‑to‑door or warehouse delivery based on buyer’s term (DAP, DDP).
+8. Post‑Shipment – Client Handover & After‑Sales
+Activity	Frequency	Owner
+Pro‑Forma ↔ Invoice reconciliation	Upon receipt of buyer’s payment advice	Export Finance Team
+Sample Retention	Keep 5 % of each batch in controlled storage (22 °C, dark) for 24 months	QA Lab
+Customer Feedback Survey	Within 30 days of receipt	Sales / Technical Service
+Technical Data Sheet (TDS) Update	When new analytical data becomes available	R&D
+Renewal of Certifications	Annually (ISO, Organic, APEDA)	Compliance Officer
+Dispute Resolution	Within 30 days of any claim (short‑ship, OOS)	Legal & Logistics
+9. One‑Page Export Readiness Checklist
+#	Item	Status (✔/✗)	Comments
+1	IEC active		
+2	APEDA registration complete		
+3	Farm‑to‑batch traceability (QR‑code) operational		
+4	Solvent‑extraction plant ISO 9001 / GMP audited		
+5	Batch CoA (GC‑MS, AV, PV, solvents) signed by NABL lab		
+6	MSDS (GHS) prepared & uploaded		
+7	Primary & secondary packaging (amber glass, UN‑1835) compliant		
+8	Export docs (Invoice, Packing List, CO, Phytosanitary, LC) ready		
+9	Freight forwarder booked; container seal documented		
+10	Cargo insurance (All Risks) secured		
+11	ICEGATE filing completed, BE number generated		
+12	GPS/tracking device activated		
+13	Post‑shipment client feedback loop live		
+10. Flow‑Diagram – From Petal to Client
+Cultivation → Petal Harvest (pre‑dawn) → Petal Conditioning → Solvent Extraction (hexane) → Solvent Recovery → Concrete Formation → Ethanol Dilution → Vacuum Evaporation → Rose Absolute → QC Lab (GC‑MS, CoA) → Primary Bottling (amber glass) → Secondary Packing (corrugated) → Phytosanitary & Export Docs → ICEGATE Shipping Bill → Freight Forwarder (FOB/CIF) → Container Loading & Sealing → Transit (GPS/Temp Log) → Destination Port → Buyer Customs Clearance → Delivery to Client → Technical Support & Feedback
+11. Key References & Resources
+Resource	Link (access)	Highlights
+DGFT – IEC Portal	https://dgft.gov.in/iec	Online IEC application & status
+APEDA Exporter Registration	https://apeda.gov.in/apedaonline/ExportRegister.jsp	Forms, organic certification
+NABL Accredited Labs List	https://www.nabl-india.org/labs/	Locate GC‑MS & pesticide labs
+ISO 3301 – Essential Oils	ISO catalogue	Testing standards
+ICEGATE – Export Declaration	https://www.icegate.gov.in	Digital customs filing
+ECHA – REACH / CPNP	https://echa.europa.eu	EU cosmetics & fragrance registration
+US FDA – CFR 21	https://www.fda.gov	Food‑flavour additive limits
+GHS – United Nations	https://unece.org/trans/dangerous-goods	MSDS format & hazard pictograms
+APEDA‑Organic Guidelines	https://apeda.gov.in	Organic certification process
+ISO 16128‑1 – Natural & Organic Cosmetic Ingredients	ISO catalogue	Labeling & ingredient criteria
+Final Thought
+Exporting Rose Absolute from India is a high‑value, highly regulated venture. Success hinges on integrated traceability (field → batch), strict solvent‑extraction controls, robust analytical certification, and flawless export documentation. By institutionalising the steps above—especially the quality‑first mindset, digital paperwork, and real‑time logistics visibility—you’ll meet the exacting standards of global fragrance houses, perfume houses, and natural‑ingredients buyers, and you’ll protect the reputation of Indian rose‑derived luxury aromas on the world stage.
+
+Stay compliant, stay consistent, and let the scent of Indian roses travel safely across borders.

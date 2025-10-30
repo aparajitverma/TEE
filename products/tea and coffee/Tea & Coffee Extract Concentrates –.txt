@@ -1,0 +1,158 @@
+Tea & Coffee Extract Concentrates – Flavour‑Ready Ingredients
+“From Leaf / Bean to Ready‑to‑Use Flavor Extract” – Complete Export Play‑book for Indian Producers
+
+Audience – Tea estates, coffee farms, contract processors, specialty ingredient manufacturers, and export houses that manufacture solvent‑, water‑, or super‑critical CO₂‑based extracts for the food‑beverage, confectionery, cosmetics and nutraceutical markets.
+
+Scope – End‑to‑end value chain: raw‑material sourcing → extraction (wet, dry, SC‑CO₂) → downstream processing (concentration, spray‑drying, flavour‑mixing) → quality & safety testing → regulatory compliance (GRAS, EU‑Food‑Additive, JSO) → packaging, documentation, freight, after‑sales.
+
+1️⃣ Legal & Certification Foundations
+Requirement	Why It Matters	How to Secure	Renewal
+IEC (Import‑Export Code)	Mandatory for any foreign‑trade transaction.	DGFT – IEC portal (2‑3 days).	Permanent (update PAN/GST).
+APEDA Export Licence	Access to export incentives, market‑development grants, organic/halal schemes.	Online APEDA portal – upload PAN, GST, IEC, bank details.	5 years.
+FSSAI Food‑Business Licence	Guarantees food‑safety compliance for edible extracts.	Register as Food Business Operator (FBO) (Class A).	Annual.
+NPOP – Food‑Safety Standard for Tea & Coffee	Sets pesticide‑residue, aflatoxin, heavy‑metal limits for the raw material.	Test in NABL‑accredited lab; produce NPOP compliance certificate.	Annual audit.
+ISO 22000 / ISO 9001	Food‑safety & quality‑management system – required by most buyers.	Implement QMS; engage registrar (SGS, DNV, BV).	3‑year certification, yearly surveillance.
+GRAS (US) / EU‑Food‑Additive (Reg 1333/2008)	Determines market‑access for flavor‑ingredients.	Prepare dossier (source, extraction method, specifications, safety data). Submit to FDA (GRAS notification) or EFSA (food‑additive dossier).	Review on a case‑by‑case basis; update if process changes.
+Organic (APEDA‑Organic) (optional)	Premium positioning in natural‑ingredients market.	Convert estate, maintain 2‑yr conversion, audit.	1‑yr audit.
+Halal / Kosher (optional)	Required for Middle‑East & certain European markets.	Apply to certifying body (JAKIM, KSA Halal, Orthodox Union).	Annual.
+Phytosanitary Certificate	Needed for plant‑origin products.	APEDA – Plant Quarantine; issuance ≤ 30 days before shipment.	Per shipment.
+Certificate of Origin (CO)	Determines duty status.	Chamber of Commerce (e.g., Calcutta, Delhi).	Per shipment.
+Letter of Credit (LC)	Guarantees payment.	Agree with buyer; attach CoA, Phytosanitary, CO.	Per shipment.
+2️⃣ Raw‑Material Sourcing (Tea & Coffee)
+Ingredient	Typical Source (India)	Key Quality Targets
+Tea Leaves (Camellia sinensis)	Assam (CTC & Orthodox), Darjeeling (First Flush), Nilgiri (Shade‑grown).	Moisture ≤ 5 % w.b., total polyphenols ≥ 70 % d.w., caffeine 2‑4 % w/w, pesticide residues ≤ NPOP MRLs.
+Coffee Beans (C. arabica / C. robusta)	Coorg, Chikmagalur, Araku (Arabica); Kerala, Andhra (Robusta).	Moisture ≈ 11‑12 % w.b., caffeine 1.0‑2.5 % w/w, aflatoxin ≤ 2 µg kg⁻¹, pesticide residues ≤ NPOP MRLs.
+Auxiliary Materials	Food‑grade water (potable), ethanol (USP‑grade, 99.9 %), CO₂ (food‑grade, ≥ 99.5 %).	Verify certificates of analysis (CoA).
+Traceability – Assign Batch‑Lot ID (e.g., TEA‑EX‑FL1‑YYMM‑NN or COF‑EX‑AR‑YYMM‑NN) with QR‑code on each receipt bag; capture GPS coordinates of field/estate.
+
+3️⃣ Extraction Technologies
+Extraction Method	Typical Solvent / Media	Process Parameters	When to Use
+Hot‑Water Extraction (Infusion)	Water (80‑95 °C)	1 kg leaf/bean : 12‑15 L water; 30‑45 min agitation; solid‑liquid ratio 1 : 12‑15.	Produces aqueous extracts for tea‑flavor, low‑solvent residue, GRAS‑friendly.
+Ethanol‑Based Solvent Extraction	Ethanol 95 % USP (food‑grade)	1 kg material : 5‑8 L ethanol; 45‑55 °C; 2‑4 h static; reflux; followed by filtration.	High‑phenolic yield; suitable for concentrated flavour extracts.
+Super‑Critical CO₂ Extraction (SC‑CO₂)	CO₂ (super‑critical) + co‑solvent (optional ethanol 5‑10 %).	Pressure 250‑350 bar; Temperature 45‑60 °C; flow 0.5‑1 kg h⁻¹; extraction time 1‑2 h.	Solvent‑free extracts; high‑purity, solvent‑less, ideal for food‑grade, “clean‑label” markets.
+Ultrasonic‑Assisted Extraction (UAE)	Water or ethanol (depending on polarity).	Frequency 20‑40 kHz; power 200‑400 W; 30‑60 min; temperature 30‑45 °C.	Improves mass‑transfer, reduces extraction time; useful for pilot‑scale or specialty aromas.
+Microwave‑Assisted Extraction (MAE)	Ethanol‑water (50‑80 % ethanol)	Microwave power 300‑600 W; 5‑10 min; temperature 60‑80 °C.	Rapid extraction; preserves thermolabile volatiles.
+Tip: For high‑value flavour‑ready ingredients (e.g., tea‑polyphenol concentrate, coffee‑aroma concentrate) SC‑CO₂ is preferred because it yields a solvent‑free oil/ extract, meets “clean‑label” demands, and simplifies downstream handling.
+
+4️⃣ Downstream Processing
+Step	Typical Operation (for SC‑CO₂ or Ethanol extracts)	Key Parameters
+Solvent Recovery (if ethanol)	Rotary evaporator (40 °C, 0.2 mbar) or falling‑film evaporator; recycle ethanol (> 95 %).	Recover ≥ 95 % ethanol; ensure residual ethanol ≤ 0.5 % v/v in final product.
+Concentration / Evaporation	Vacuum evap (45‑55 °C, 0.1 mbar) to reach solid‑content 30‑45 % w/w (for liquid concentrates).	Monitor Brix / refractometer (target 30‑45 %).
+Spray‑Drying (optional)	Inlet 180‑210 °C, outlet 80‑100 °C; atomizer (2‑4 mm nozzle); feed rate 10‑15 kg h⁻¹.	Produce powdered extracts (1‑5 % moisture).
+Encapsulation (optional)	Maltodextrin, gum‑arabic, or cyclodextrin carriers (10‑30 % w/w).	Improves stability, solubility.
+Standardisation	Adjust to target phenolic‑content (e.g., 5 % catechins for tea‑extract, 3 % chlorogenic acids for coffee‑extract) using stock‑solution blending and analytical verification.	Use HPLC for phenolics; adjust with de‑ionised water or food‑grade glycerin.
+Filtration & Clarification	0.45 µm membrane + activated‑carbon filter (if colour/odor adjustment needed).	Remove particulates, off‑flavours.
+Microbial & Safety Treatment	Pasteurisation at 85 °C for 30 s (liquid) or UV‑treatment (powder).	Ensure total plate count ≤ 10³ CFU g⁻¹.
+Bottling / Bulk Packing	Stainless‑steel (AISI‑304) tanks for bulk; PET or HDPE drums (25 L‑200 L) for liquids; laminated foil pouches (poly‑ethylene/Al) for powders.	Fill under N₂ blanket (≤ 2 % O₂).
+5️⃣ Laboratory Quality Assurance (QA)
+Parameter	Method (ISO/ASTM)	Specification – Typical for Flavor‑Ready Extracts
+Moisture (liquid concentrates)	Karl‑Fischer titration (ASTM D 4442).	≤ 3 % w/w.
+Moisture (spray‑dry powders)	AOAC 935.29 (drying oven).	≤ 5 % w/w.
+Total Phenolics (TP)	Folin‑Ciocalteu (ISO 17025).	Tea‑extract ≥ 5 % catechin equivalents; Coffee‑extract ≥ 3 % chlorogenic acid equivalents.
+Caffeine	HPLC‑UV (USP < 2171).	1‑4 % w/w (depending on source).
+Volatile Aroma Profile	GC‑MS (ISO 11024‑1).	Identify key markers: L‑theanine, geraniol (tea); 2‑Furyl‑methanol, 3‑methoxy‑4‑hydroxy‑benzaldehyde (coffee).
+Residual Solvent (Ethanol)	GC‑FID (USP < 467).	≤ 0.5 % v/v.
+Aflatoxin B1	ELISA (ISO 19075‑1).	≤ 2 µg kg⁻¹ (EU limit).
+Pesticide Residues	LC‑MS/MS (NPOP).	All below MRLs.
+Heavy Metals (Pb, Cd, As, Hg)	ICP‑MS (ISO 17294‑2).	Pb ≤ 0.1 ppm, Cd ≤ 0.05 ppm, As ≤ 0.2 ppm, Hg ≤ 0.01 ppm.
+Microbial Load	ISO 20776‑1 (Total Plate Count).	≤ 10³ CFU g⁻¹ (liquid) / ≤ 10⁴ CFU g⁻¹ (powder).
+pH	pH‑meter (ISO 10523).	4.0‑5.5 (liquid) – stable for beverage applications.
+Brix / Solids	Refractometer (ISO 6375).	30‑45 % (liquid).
+Certificate of Analysis (CoA)	Generated per batch, digitally signed, QR‑code linked to full lab report.	Must accompany every export shipment.
+6️⃣ Regulatory Dossiers (GRAS / Food‑Additive)
+Market	Regulatory Body	Core Dossier Elements
+USA	FDA – GRAS	1. Botanical source & botanical name. 2. Detailed extraction method (solvent, temperature, pressure). 3. Purity & composition (phenolics, caffeine, residual solvent). 4. Toxicological data (acute, sub‑chronic, genotoxicity – usually from literature). 5. Intended use levels (e.g., ≤ 0.5 % in beverages). 6. Manufacturing process flow‑chart & GMP compliance.
+EU	EFSA – Food Additive / Novel Food	1. Botanical identity, part used. 2. Extraction technology (SC‑CO₂, ethanol, water). 3. Specification (max heavy metals, pesticide residues, microbiology). 4. Exposure assessment (max use level, per‑capita intake). 5. Toxicology summary (existing literature, in‑house studies). 6. Labeling requirements (E‑number if classified as additive).
+Japan	Food Safety Commission (FSC)	Similar to GRAS; submit “Food‑Ingredient Notification”.
+Australia / New Zealand	FSANZ – Food Standards Code	Register as “Food‑Additive” or “Flavoring”. Provide composition, safety data, intended use.
+Middle‑East (GCC)	GSO – Food Regulations	Require Halal certificate, compliance with GCC‑Standard 229 (food additives).
+Practical tip: Use a template dossier (Excel + PDF) that can be quickly amended for each new extract (different raw material, extraction method, or specification). Keep a central repository of toxicology references (e.g., WHO‑JECFA monographs) to accelerate GRAS/EFSA submissions.
+
+7️⃣ Packaging, Preservation & Labelling
+Requirement	Specification	Reason
+Primary container – Liquid	Stainless‑steel AISI‑304 tank (bulk) → Food‑grade PET drums (25‑200 L) or HDPE drums with N₂‑blanket (≤ 2 % O₂).	Corrosion‑resistant, inert, prevents oxidation.
+Primary container – Powder	Laminated foil pouches (PET/Al/PE) 1 kg‑25 kg; metal‑lined HDPE drums for bulk.	Moisture barrier, protects volatile aromatics.
+Secondary packaging	Four‑wall corrugated cartons with corner protectors; inner foam inserts for drums.	Shock‑absorption for sea/rail.
+Label content (mandatory)	• Product name (e.g., “Tea‑Polyphenol Concentrate – Assam CTC”)
+• Batch‑Lot ID (QR‑code)
+• Net weight/volume
+• Moisture %
+• Phenolic content (e.g., “Catechin ≥ 5 %”)
+• Caffeine %
+• Storage conditions (Cool, dry, protected from light)
+• Certifications (GRAS, Organic, Halal)
+• FSSAI licence No.
+• “For use as flavour/functional ingredient – Not a beverage”.	Meets BIS IS 3024, EU Regulation 1333, US FDA labeling.
+Barcoding / RFID	GS1‑128 linear barcode on each carton; optional UHF RFID tag for high‑value consignments.	Enables customs scan, buyer WMS integration.
+Preservation	Store at 15‑20 °C, ≤ 60 % RH, N₂ atmosphere; add silica‑gel sachets (0.2 % w/w) for powders.	Prevents oxidative degradation of phenolics and volatile aromatics.
+Shelf‑life	24 months from packing (validated by ASTM D 7032 accelerated ageing).	Proven for both liquid and powder extracts.
+8️⃣ Export Documentation (Complete Paper Trail)
+Document	Issuer	Core Details
+Commercial Invoice	Exporter	FOB/CIF price, HS‑code (0901 10 00 for tea‑extract, 0901 11 00 for coffee‑extract), currency, payment terms, bank details.
+Packing List	Exporter	Bag / drum numbers, batch‑lot IDs, net/gross weight, dimensions, seal number.
+Certificate of Origin (CO)	Chamber of Commerce (e.g., Calcutta, Delhi).	IEC, APEDA licence, raw‑material origin (Assam tea, Coorg coffee).
+Phytosanitary Certificate	APEDA – Plant Quarantine	Confirmation of pest‑free status (valid ≤ 30 days).
+Certificate of Analysis (CoA)	QA Lab (NABL‑accredited).	Moisture, phenolics, caffeine, residual solvent, microbial, heavy‑metal, pesticide results; QR‑code link to full lab dossier.
+Material Safety Data Sheet (MSDS)	Exporter	GHS classification, handling, storage, first‑aid.
+Letter of Credit (LC)	Buyer’s bank	Must reference invoice and require CoA, Phytosanitary, CO.
+Insurance Certificate	Marine insurer (e.g., JCB Insurance)	“All Risks” covering loss, moisture, theft.
+Export Declaration (Shipping Bill)	Customs via ICEGATE	Generates Bill of Export (BE) number.
+GRAS / Food‑Additive notification proof	Exporter (copy of FDA/EFSA acknowledgment)	Attach to shipment for markets that request it.
+Organic / Halal / Fair‑Trade certificates (if applicable)	Certifying bodies	Copy of valid certificate.
+FSSAI Import Permit (if buyer uses for nutraceuticals)	FSSAI	Required for functional‑food applications.
+All documents should be stored in PDF/A, digitally signed, and uploaded to a secure cloud DMS (SharePoint/DocuWare) with version control. Provide the buyer with a download‑link (one‑time password protected) for easy access.
+
+9️⃣ Freight & Logistics
+Decision	Recommended Practice
+Incoterm	FOB (Mangaluru / Kochi Port) – most common for bulk liquids & powders.
+CIF – if buyer wants freight and insurance handled by exporter (e.g., for smaller consignments).
+Transport mode	Sea freight – 20‑ft or 40‑ft HC containers.
+Air freight – only for sample kits (< 50 kg) or emergency orders.
+Container loading	• Liquid drums placed on sturdy wooden pallets (treated per ISPM‑15).
+• Powder pouches stacked vertically, separated by corrugated dividers to prevent movement.
+• Seal number recorded on packing list.
+Temperature & humidity control	Not temperature‑critical, but keep ≤ 30 °C and ≤ 80 % RH; for long voyages (> 30 days) add silica‑gel packets.
+Tracking	GPS tracker on each container + optional temperature data logger (log every 4 h). Share live data via buyer portal.
+Customs – India	Random inspection possible; have CoA, MSDS, Phytosanitary ready. Pay IGST (if any) and claim GST refund under Export Scheme.
+Customs – Destination	Provide Bill of Lading, Invoice, CO, Phytosanitary, CoA, LC. Most major markets apply 0 % duty under HS 0901.00.
+Insurance	“All‑Risks” covering loss, theft, moisture; essential for high‑value liquid concentrates.
+Demurrage	Negotiate 5 free‑days; maintain a demurrage contingency fund (~US $1 000 per container).
+Risk mitigation	• Crop‑insurance (PMFBY) for raw material supply risk.
+• Currency‑hedge via forward contracts for price stability.
+🔟 Market‑Entry & After‑Sales Support
+Activity	Practical Steps
+Product positioning	Emphasise “Clean‑Label, Solvent‑Free (SC‑CO₂) or Food‑Grade Ethanol‑Extract”, “High‑Phenolic Content”, “GRAS‑Certified”, “Organic/Halal (if applicable)”.
+Target customers	• Large‑scale beverage manufacturers (soft‑drinks, RTD teas, coffee‑drinks).
+• Confectionery & bakery processors (flavourings).
+• Nutraceutical firms (functional‑ingredient blends).
+Sample program	Ship a 5 kg trial kit (liquid 2 L + powder 3 kg) in sealed, labelled containers with digital CoA. Follow up within 48 h via email survey.
+Pricing model	Base on cost‑plus: raw‑material cost + extraction cost + QA + packaging + freight + margin. Add premium for certifications (organic + 10 %, GRAS + 5 %).
+Trade shows	Specialty & Fine Food Ingredients Expo (USA), Food Ingredients Europe (Germany), World Tea Expo (Shanghai), Coffee & Tea Expo (Dubai).
+Digital B2B presence	Profile on Alibaba, IndiaMART, and a dedicated website with API‑driven batch traceability for buyers’ ERP.
+Regulatory support	Offer technical dossier preparation assistance (GRAS filing, EFSA Food‑Additive appraisal).
+After‑sales	Provide application guidelines (e.g., recommended dosage 0.3 %‑0.5 % in beverage), stability data (shelf‑life at 25 °C), and technical support (flavour pairing, formulation advice).
+Re‑order planning	Keep a 12‑month production calendar; notify buyers 8‑10 weeks before next batch availability.
+📋 Quick‑Start Export Checklist (Print‑Ready)
+✅	Item	Remarks
+1	IEC & APEDA licence active	Upload to cloud DMS.
+2	Raw‑material sourcing contracts (Assam tea / Coorg coffee) with pesticide‑residue compliance	Verify CoA for each lot.
+3	Extraction method validated (SC‑CO₂ or ethanol) & SOPs documented	Include process flow‑chart.
+4	ISO 22000 / ISO 9001 QMS audited	Internal audit within 30 days.
+5	GRAS / Food‑Additive dossier prepared & submitted (or in‑process)	Keep copy of FDA/EFSA acknowledgment.
+6	Batch CoA generated (phenolics, caffeine, microbes, residues)	Digitally signed, QR‑code attached.
+7	Primary & secondary packaging compliant (N₂‑blanket, moisture barrier)	Barcode & RFID affixed.
+8	Phytosanitary certificate obtained (valid ≥ 30 days)	Confirm with APEDA.
+9	Certificate of Origin issued by Chamber	Include IEC, APEDA licence.
+10	Commercial Invoice, Packing List, LC, Insurance ready	PDFs stored in Export folder.
+11	Freight forwarder booked; container sealed, seal number logged	GPS tracker installed.
+12	ICEGATE shipping bill filed; BE number generated	Verify with customs broker.
+13	Post‑shipment client feedback loop live	Record in CRM for re‑order planning.
+📌 Bottom Line
+Exporting Tea & Coffee Extract Concentrates as flavour‑ready ingredients hinges on three pillars:
+
+Scientific extraction excellence – SC‑CO₂ for solvent‑free, high‑purity extracts or food‑grade ethanol/water extractions for cost‑effective high‑phenolic liquids.
+Robust regulatory compliance – GRGR (GRAS, EU‑Food‑Additive), NPOP, ISO 22000, and all required certificates (Organic, Halal, Fair‑Trade) plus a meticulous CoA for each batch.
+Supply‑chain traceability & logistics – QR‑coded batch IDs from field to container, temperature/humidity‑monitored sea freight, full documentation (IEC, CO, Phytosanitary, CoA) and insurance.
+By institutionalising the workflow in this guide—from raw‑material contract, through controlled extraction and strict QA, to compliant packaging, documentation, and reliable freight—you will meet the exacting standards of global food‑and‑beverage manufacturers and command premium prices for clean‑label, high‑performance flavor ingredients.
+
+Happy exporting, and let your Indian tea‑ and coffee‑derived extracts travel safely to the world’s kitchens, cafés, and factories!

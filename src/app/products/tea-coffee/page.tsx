@@ -146,26 +146,99 @@ export default function TeaCoffee() {
               </div>
             </div>
 
-            {/* Tea Varieties */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 mb-12">
-              <h2 className="text-2xl font-bold text-white mb-6">Tea & Coffee Varieties</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-white font-semibold mb-3">Black Tea</h3>
-                  <p className="text-gray-300 text-sm mb-2">Assam CTC, Darjeeling Orthodox, Nilgiri specialty grades</p>
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold mb-3">Green & White Tea</h3>
-                  <p className="text-gray-300 text-sm mb-2">Premium orthodox processing with high antioxidant content</p>
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold mb-3">Flavored Blends</h3>
-                  <p className="text-gray-300 text-sm mb-2">Masala Chai, Earl Grey, Lemon, Jasmine - custom blending available</p>
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold mb-3">Arabica Coffee</h3>
-                  <p className="text-gray-300 text-sm mb-2">Coorg region beans - whole, roasted, or ground</p>
-                </div>
+            {/* Featured Products */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Tea & Coffee Products</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Assam Black Tea */}
+                <a href="/products/tea-coffee/assam-black-tea" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-amber-500/50 transition-all">
+                  <div className="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">Assam Black Tea</h3>
+                  <p className="text-gray-400 text-sm mb-3">Camellia sinensis var. assamica - CTC & Orthodox</p>
+                  <p className="text-gray-300 text-sm mb-4">Premium Flush-1/2 grades. CTC (BOP, BP, PF) & Orthodox varieties. Robust, malty character. 2,000-2,500 kg/ha yield. NPOP certified, ISO 22000. Fair-Trade & Rainforest Alliance options.</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">NPOP Certified</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Organic Option</span>
+                    <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Fair-Trade</span>
+                  </div>
+                  <p className="text-amber-400 text-sm font-semibold">FOB: $2.80-4.00/kg</p>
+                </a>
+
+                {/* Darjeeling First Flush */}
+                <a href="/products/tea-coffee/darjeeling-tea" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-green-500/50 transition-all">
+                  <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">Darjeeling First Flush</h3>
+                  <p className="text-gray-400 text-sm mb-3">Whole-Leaf Black & Oolong - Champagne of Teas</p>
+                  <p className="text-gray-300 text-sm mb-4">Premium orthodox processing. Delicate muscatel notes. Altitude 950-2,150m. SFTGFOP1 grade. GI-tagged \"Darjeeling Tea\". March-April harvest. High polyphenol content.</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">GI Tagged</span>
+                    <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Organic</span>
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">SFTGFOP1</span>
+                  </div>
+                  <p className="text-green-400 text-sm font-semibold">FOB: Premium pricing</p>
+                </a>
+
+                {/* Arabica Coffee */}
+                <a href="/products/tea-coffee/arabica-coffee" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-yellow-600/50 transition-all">
+                  <div className="w-16 h-16 bg-yellow-600/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-600 transition-colors">Indian Specialty Arabica</h3>
+                  <p className="text-gray-400 text-sm mb-3">Coffea arabica - Single-Estate Green Beans</p>
+                  <p className="text-gray-300 text-sm mb-4">Coorg, Chikmagalur, Araku estates. Smooth, balanced flavor. Altitude 900-1,600m. Washed/natural processing. Caffeine 1.0-1.5%. Specialty Coffee Association (SCA) graded. Organic & Fair-Trade certified.</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-xs bg-yellow-600/20 text-yellow-300 px-2 py-1 rounded">SCA Graded</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Organic</span>
+                    <span className="text-xs bg-orange-500/20 text-orange-300 px-2 py-1 rounded">Fair-Trade</span>
+                  </div>
+                  <p className="text-yellow-600 text-sm font-semibold">FOB: Contact for pricing</p>
+                </a>
+
+                {/* Robusta Coffee */}
+                <a href="/products/tea-coffee/robusta-coffee" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-orange-600/50 transition-all">
+                  <div className="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-600 transition-colors">Indian Robusta Coffee</h3>
+                  <p className="text-gray-400 text-sm mb-3">Coffea canephora - Shade-Grown, Low-Acidity</p>
+                  <p className="text-gray-300 text-sm mb-4">Kerala & Andhra estates. Bold, full-bodied. Caffeine 2.0-2.5%. Shade-grown for lower acidity. Cherry AB grade. Moisture 11-12%. Aflatoxin &lt;2 µg/kg. Ideal for espresso blends.</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-xs bg-orange-600/20 text-orange-300 px-2 py-1 rounded">Shade-Grown</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Low Acidity</span>
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">Cherry AB</span>
+                  </div>
+                  <p className="text-orange-600 text-sm font-semibold">FOB: Contact for pricing</p>
+                </a>
+
+                {/* Tea & Coffee Extract Concentrates */}
+                <a href="/products/tea-coffee/extract-concentrates" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-teal-500/50 transition-all">
+                  <div className="w-16 h-16 bg-teal-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-teal-400 transition-colors">Tea & Coffee Extract Concentrates</h3>
+                  <p className="text-gray-400 text-sm mb-3">Flavor-Ready Ingredients</p>
+                  <p className="text-gray-300 text-sm mb-4">Liquid & powder concentrates. Supercritical CO₂ or ethanol extraction. Total polyphenols ≥70%. Caffeine 2-4%. Instant tea/coffee, RTD beverages, nutraceuticals. GRAS status. ISO 22000 certified.</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-xs bg-teal-500/20 text-teal-300 px-2 py-1 rounded">GRAS</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">ISO 22000</span>
+                    <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">SC-CO₂</span>
+                  </div>
+                  <p className="text-teal-400 text-sm font-semibold">FOB: Contact for pricing</p>
+                </a>
               </div>
             </div>
 

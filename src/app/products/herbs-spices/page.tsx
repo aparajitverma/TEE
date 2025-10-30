@@ -149,6 +149,92 @@ export default function HerbsSpicesPage() {
             </div>
           </div>
 
+          {/* Featured Products */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Spices & Herbs</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Black Pepper */}
+              <a href="/products/herbs-spices/black-pepper" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-red-500/50 transition-all">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-4">
+                  <Flame className="w-8 h-8 text-red-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">Black Pepper</h3>
+                <p className="text-gray-400 text-sm mb-3">Piper nigrum - King of Spices</p>
+                <p className="text-gray-300 text-sm mb-4">Premium Tellicherry, Malabar & Muntok grades. Piperine content 4-7%. Whole peppercorns, cracked, ground. Kerala & Karnataka origin. Bold size 4.75mm+. ASTA certified.</p>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  <span className="text-xs bg-red-500/20 text-red-300 px-2 py-1 rounded">ASTA Certified</span>
+                  <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Organic Option</span>
+                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Steam Sterilized</span>
+                </div>
+                <p className="text-red-400 text-sm font-semibold">FOB: Contact for pricing</p>
+              </a>
+
+              {/* Turmeric */}
+              <a href="/products/herbs-spices/turmeric" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-yellow-500/50 transition-all">
+                <div className="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mb-4">
+                  <Droplet className="w-8 h-8 text-yellow-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Turmeric</h3>
+                <p className="text-gray-400 text-sm mb-3">Curcuma longa - Golden Spice</p>
+                <p className="text-gray-300 text-sm mb-4">Alleppey & Madras varieties. Curcumin 2-5%. Whole fingers, powder (40-100 mesh). Bright yellow color. Tamil Nadu & Andhra Pradesh. Anti-inflammatory properties.</p>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  <span className="text-xs bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded">High Curcumin</span>
+                  <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Organic</span>
+                  <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">ISO 22000</span>
+                </div>
+                <p className="text-yellow-400 text-sm font-semibold">FOB: Contact for pricing</p>
+              </a>
+
+              {/* Green Cardamom */}
+              <a href="/products/herbs-spices/green-cardamom" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-emerald-500/50 transition-all">
+                <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mb-4">
+                  <Leaf className="w-8 h-8 text-emerald-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Green Cardamom</h3>
+                <p className="text-gray-400 text-sm mb-3">Elettaria cardamomum - Queen of Spices</p>
+                <p className="text-gray-300 text-sm mb-4">Premium Alleppey Green Bold (AGB). 8mm+ pods. Volatile oil 6-8%. Whole pods, seeds, ground. Kerala Western Ghats. Aromatic, sweet flavor. High-value spice.</p>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  <span className="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-1 rounded">Bold Grade</span>
+                  <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Organic</span>
+                  <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">High Oil Content</span>
+                </div>
+                <p className="text-emerald-400 text-sm font-semibold">FOB: Premium pricing</p>
+              </a>
+
+              {/* Cumin */}
+              <a href="/products/herbs-spices/cumin" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-amber-500/50 transition-all">
+                <div className="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mb-4">
+                  <Blend className="w-8 h-8 text-amber-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">Cumin Seeds</h3>
+                <p className="text-gray-400 text-sm mb-3">Cuminum cyminum - Jeera</p>
+                <p className="text-gray-300 text-sm mb-4">Bold & regular varieties. Volatile oil 2.5-4.5%. Whole seeds, powder. Gujarat & Rajasthan. Warm, earthy flavor. Essential for curry blends. Machine cleaned, 99% purity.</p>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  <span className="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">99% Purity</span>
+                  <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Organic</span>
+                  <span className="text-xs bg-orange-500/20 text-orange-300 px-2 py-1 rounded">Bold Size</span>
+                </div>
+                <p className="text-amber-400 text-sm font-semibold">FOB: Contact for pricing</p>
+              </a>
+
+              {/* Dry Ginger */}
+              <a href="/products/herbs-spices/dry-ginger" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-orange-500/50 transition-all">
+                <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mb-4">
+                  <Flame className="w-8 h-8 text-orange-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">Dry Ginger</h3>
+                <p className="text-gray-400 text-sm mb-3">Zingiber officinale - Sonth</p>
+                <p className="text-gray-300 text-sm mb-4">Cochin & Calicut varieties. Volatile oil 1.5-3%. Whole rhizomes, powder (40-80 mesh). Kerala & Karnataka. Pungent, warming spice. Digestive aid. Bleached & unbleached options.</p>
+                <div className="flex flex-wrap gap-2 mb-3">
+                  <span className="text-xs bg-orange-500/20 text-orange-300 px-2 py-1 rounded">High Oil</span>
+                  <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Organic</span>
+                  <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">GMP</span>
+                </div>
+                <p className="text-orange-400 text-sm font-semibold">FOB: Contact for pricing</p>
+              </a>
+            </div>
+          </div>
+
           {/* Detailed Product Information */}
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 md:p-12 mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">

@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Aromatic Effluences – Essential Oils & Natural Fragrances | The Export Express',
-  description: 'Export premium Indian essential oils: Sandalwood, Jasmine, Rose, Vetiver. Cold-pressed, steam-distilled, 100% pure. COA & GC-MS analysis provided. HS Codes 3301, 3302.',
-  keywords: 'essential oils export India, sandalwood oil, jasmine oil, rose oil, natural fragrances, aromatherapy oils, therapeutic grade oils',
+  description: 'Export premium Indian essential oils: Sandalwood, Jasmine Absolute, Rose Absolute, Vetiver, Lemongrass. Steam-distilled, 100% pure. COA & GC-MS analysis. CITES compliant. HS Codes 3301, 3302.',
+  keywords: 'essential oils export India, sandalwood oil, jasmine absolute, rose absolute, vetiver oil, lemongrass oil, natural fragrances, aromatherapy oils, therapeutic grade oils, CITES compliant',
   openGraph: {
     title: 'Aromatic Effluences – Essential Oils & Natural Fragrances',
     description: 'Export premium Indian essential oils. Cold-pressed, steam-distilled, 100% pure with COA & GC-MS analysis.',
@@ -36,6 +36,7 @@ export default function Aromatics() {
           "itemOffered": {
             "@type": "Product",
             "name": "Sandalwood Essential Oil",
+            "description": "Premium Kashmir sandalwood oil, 70-90% α-santalol, CITES compliant",
             "category": "Essential Oils"
           }
         },
@@ -43,7 +44,8 @@ export default function Aromatics() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Product",
-            "name": "Jasmine Essential Oil",
+            "name": "Jasmine Absolute",
+            "description": "Luxurious jasmine absolute from hand-picked pre-dawn blossoms",
             "category": "Essential Oils"
           }
         },
@@ -51,7 +53,26 @@ export default function Aromatics() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Product",
-            "name": "Rose Essential Oil",
+            "name": "Rose Absolute",
+            "description": "Exquisite rose absolute from Rosa damascena, Kashmir origin",
+            "category": "Essential Oils"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Vetiver Essential Oil",
+            "description": "Earthy vetiver oil from 12-18 month roots, 30%+ vetiverol",
+            "category": "Essential Oils"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Lemongrass Essential Oil",
+            "description": "Bright citrusy lemongrass oil with 75%+ citral content",
             "category": "Essential Oils"
           }
         }
@@ -148,15 +169,99 @@ export default function Aromatics() {
               </div>
             </div>
 
-            {/* Popular Oils */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 mb-12">
-              <h2 className="text-2xl font-bold text-white mb-6">Popular Essential Oils</h2>
-              <div className="grid md:grid-cols-5 gap-3">
-                {oils.map((oil) => (
-                  <div key={oil} className="bg-white/5 rounded-xl p-3 text-center hover:bg-white/10 transition-all">
-                    <p className="text-gray-300 text-sm">{oil}</p>
+            {/* Featured Products */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Essential Oils & Absolutes</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Sandalwood Essential Oil */}
+                <a href="/products/aromatics/sandalwood-oil" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-purple-500/50 transition-all">
+                  <div className="w-16 h-16 bg-amber-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
                   </div>
-                ))}
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Sandalwood Essential Oil</h3>
+                  <p className="text-gray-400 text-sm mb-3">Santalum album - 70-90% α-santalol</p>
+                  <p className="text-gray-300 text-sm mb-4">Premium Kashmir sandalwood oil with GI certification. Steam-distilled from 15+ year old heartwood. CITES compliant, organic & fair-trade certified.</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">GMP Certified</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">USDA Organic</span>
+                    <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">CITES</span>
+                  </div>
+                  <p className="text-purple-400 text-sm font-semibold">FOB: $1,200-$2,500/kg</p>
+                </a>
+
+                {/* Jasmine Absolute */}
+                <a href="/products/aromatics/jasmine-absolute" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-pink-500/50 transition-all">
+                  <div className="w-16 h-16 bg-pink-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-pink-400 transition-colors">Jasmine Absolute</h3>
+                  <p className="text-gray-400 text-sm mb-3">Jasminum grandiflorum - Solvent extracted</p>
+                  <p className="text-gray-300 text-sm mb-4">Luxurious jasmine absolute from hand-picked pre-dawn blossoms. High linalool & benzyl acetate content. Hexane residue &lt;10ppm. NABL lab certified.</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">ISO 9001</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Organic Option</span>
+                    <span className="text-xs bg-orange-500/20 text-orange-300 px-2 py-1 rounded">IFRA Compliant</span>
+                  </div>
+                  <p className="text-pink-400 text-sm font-semibold">FOB: Contact for pricing</p>
+                </a>
+
+                {/* Rose Absolute */}
+                <a href="/products/aromatics/rose-absolute" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-rose-500/50 transition-all">
+                  <div className="w-16 h-16 bg-rose-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">Rose Absolute</h3>
+                  <p className="text-gray-400 text-sm mb-3">Rosa damascena - Kashmir origin</p>
+                  <p className="text-gray-300 text-sm mb-4">Exquisite rose absolute with 30%+ phenylethyl alcohol, 20%+ geraniol. Solvent-extracted from fresh petals. GC-MS certified, batch traceability via QR code.</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">GMP</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Fair Trade</span>
+                    <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">COSMOS</span>
+                  </div>
+                  <p className="text-rose-400 text-sm font-semibold">FOB: Premium pricing</p>
+                </a>
+
+                {/* Vetiver Essential Oil */}
+                <a href="/products/aromatics/vetiver-oil" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-emerald-500/50 transition-all">
+                  <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Vetiver Essential Oil</h3>
+                  <p className="text-gray-400 text-sm mb-3">Chrysopogon zizanioides - Root distilled</p>
+                  <p className="text-gray-300 text-sm mb-4">Earthy, grounding vetiver oil from 12-18 month roots. 30%+ vetiverol, rich sesquiterpene profile. Steam distilled, nitrogen-sealed packaging. APEDA registered.</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">ISO 9001</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Sustainable</span>
+                    <span className="text-xs bg-orange-500/20 text-orange-300 px-2 py-1 rounded">REACH</span>
+                  </div>
+                  <p className="text-emerald-400 text-sm font-semibold">FOB: Contact for pricing</p>
+                </a>
+
+                {/* Lemongrass Essential Oil */}
+                <a href="/products/aromatics/lemongrass-oil" className="group bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-yellow-500/50 transition-all">
+                  <div className="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">Lemongrass Essential Oil</h3>
+                  <p className="text-gray-400 text-sm mb-3">Cymbopogon flexuosus - Fresh citrus aroma</p>
+                  <p className="text-gray-300 text-sm mb-4">Bright, citrusy lemongrass oil with 75%+ citral content. Steam-distilled from fresh stalks harvested at peak morning hours. Pesticide-free, IPM cultivated.</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">GMP</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Organic Option</span>
+                    <span className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Halal</span>
+                  </div>
+                  <p className="text-yellow-400 text-sm font-semibold">FOB: Contact for pricing</p>
+                </a>
               </div>
             </div>
 

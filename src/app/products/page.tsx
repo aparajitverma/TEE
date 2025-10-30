@@ -4,134 +4,110 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Products - Premium Indian Export Products | The Export Express',
-  description: 'Explore our range of premium Indian export products including herbal & ayurvedic, aromatics, tea & coffee, jute products, luxury fabrics, eco-friendly essentials, and herbs & spices.',
-  keywords: 'Indian export products, herbal products, essential oils, tea export, jute products, luxury fabrics, eco-friendly products, spices export',
+  description: 'Explore our range of premium Indian export products including herbal & ayurvedic, aromatic effluences, tea & coffee, and herbs & spices.',
+  keywords: 'Indian export products, herbal products, essential oils, tea export, spices export, ayurvedic herbs, aromatics, coffee beans',
 };
 
 export default function Products() {
   const categories = [
     {
       title: 'Herbal & Ayurvedic',
-      description: 'Over 150 Ayurvedic herbs including Ashwagandha, Turmeric, Brahmi',
+      description: 'Ashwagandha, Curcumin Extract, Triphala, Neem Oil, Kashmir Saffron',
       link: '/products/herbal-ayurvedic',
       icon: Leaf,
       color: 'from-green-600 to-green-700',
-      productCount: '150+'
+      productCount: '5 Featured'
     },
     {
       title: 'Aromatic Effluences',
-      description: 'Essential oils, hydrosols, and natural fragrance bases',
+      description: 'Sandalwood, Jasmine, Rose, Vetiver, Lemongrass essential oils & absolutes',
       link: '/products/aromatics',
       icon: Droplet,
       color: 'from-purple-600 to-purple-700',
-      productCount: '75+'
+      productCount: '5 Featured'
     },
     {
       title: 'Tea & Coffee',
-      description: 'Premium teas from Assam, Darjeeling, and Arabica coffee from Coorg',
+      description: 'Assam, Darjeeling tea, Arabica & Robusta coffee, Extract concentrates',
       link: '/products/tea-coffee',
       icon: Coffee,
       color: 'from-amber-600 to-amber-700',
-      productCount: '50+'
-    },
-    {
-      title: 'Jute & Natural Fiber Products',
-      description: 'Eco-friendly jute bags, home decor, handicrafts, and industrial products',
-      link: '/products/jute-products',
-      icon: ShoppingBag,
-      color: 'from-yellow-600 to-yellow-700',
-      productCount: '100+'
-    },
-    {
-      title: 'Luxury Fabric Sourcing',
-      description: 'Premium silk, cotton, handloom heritage weaves, and designer fabrics',
-      link: '/products/luxury-fabrics',
-      icon: Sparkles,
-      color: 'from-pink-600 to-pink-700',
-      productCount: '200+'
-    },
-    {
-      title: 'Eco-Friendly Daily Essentials',
-      description: 'Organic personal care, bamboo utensils, natural cleaning, biodegradable packaging',
-      link: '/products/eco-essentials',
-      icon: Recycle,
-      color: 'from-teal-600 to-teal-700',
-      productCount: '80+'
+      productCount: '5 Featured'
     },
     {
       title: 'Herbs & Spices',
-      description: 'Black pepper, Cardamom, Turmeric, Cumin, and custom spice blends',
+      description: 'Black Pepper, Turmeric, Green Cardamom, Cumin, Dry Ginger',
       link: '/products/herbs-spices',
       icon: Flame,
       color: 'from-red-600 to-red-700',
-      productCount: '60+'
+      productCount: '5 Featured'
     },
   ];
 
   const featuredProducts = [
     {
-      name: 'Organic Ashwagandha Root Powder',
+      name: 'Ashwagandha Root Extract',
       category: 'Herbal & Ayurvedic',
       image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600&h=600&fit=crop',
-      price: 'From $12/kg',
+      price: 'FOB $45-80/kg',
       link: '/products/herbal-ayurvedic/ashwagandha',
-      badge: 'Bestseller'
+      badge: '5-10% Withanolides'
     },
     {
-      name: 'Organic Turmeric Powder',
+      name: 'Curcumin Extract 95%',
       category: 'Herbal & Ayurvedic',
       image: 'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&h=600&fit=crop',
-      price: 'From $8/kg',
-      link: '/products/herbal-ayurvedic/turmeric',
-      badge: 'High Curcumin'
+      price: 'FOB $120-200/kg',
+      link: '/products/herbal-ayurvedic/curcumin-extract',
+      badge: 'Bio-Available'
     },
     {
       name: 'Sandalwood Essential Oil',
       category: 'Aromatic Effluences',
       image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=600&h=600&fit=crop',
-      price: 'From $180/10ml',
+      price: 'FOB $1,200-2,500/kg',
       link: '/products/aromatics/sandalwood-oil',
-      badge: 'Premium'
+      badge: 'CITES Compliant'
     },
     {
-      name: 'Jasmine Absolute Oil',
+      name: 'Jasmine Absolute',
       category: 'Aromatic Effluences',
       image: 'https://images.unsplash.com/photo-1595246140625-573b715d11dc?w=600&h=600&fit=crop',
-      price: 'From $120/10ml',
-      link: '/products/aromatics/jasmine-oil',
-      badge: 'Luxury'
+      price: 'Premium Pricing',
+      link: '/products/aromatics/jasmine-absolute',
+      badge: 'Solvent Extracted'
     },
     {
-      name: 'Darjeeling First Flush Tea',
+      name: 'Darjeeling First Flush',
       category: 'Tea & Coffee',
       image: 'https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=600&h=600&fit=crop',
-      price: 'From $25/kg',
+      price: 'Premium Pricing',
       link: '/products/tea-coffee/darjeeling-tea',
-      badge: 'Organic'
+      badge: 'GI Tagged'
     },
     {
-      name: 'Arabica Coffee Beans',
+      name: 'Assam Black Tea',
       category: 'Tea & Coffee',
       image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&h=600&fit=crop',
-      price: 'From $15/kg',
-      link: '/products/tea-coffee/arabica-coffee',
-      badge: 'Specialty Grade'
+      price: 'FOB $2.80-4.00/kg',
+      link: '/products/tea-coffee/assam-black-tea',
+      badge: 'CTC & Orthodox'
     },
     {
-      name: 'Eco-Friendly Jute Tote Bags',
-      category: 'Jute Products',
-      image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&h=600&fit=crop',
-      price: 'From $2/piece',
-      link: '/products/jute-products/jute-tote-bags',
-      badge: 'Customizable'
-    },
-    {
-      name: 'Black Pepper (Tellicherry)',
+      name: 'Black Pepper',
       category: 'Herbs & Spices',
       image: 'https://images.unsplash.com/photo-1599639957043-f3aa5c986398?w=600&h=600&fit=crop',
-      price: 'From $10/kg',
+      price: 'Contact for Pricing',
       link: '/products/herbs-spices/black-pepper',
-      badge: 'Premium Grade'
+      badge: 'Tellicherry Grade'
+    },
+    {
+      name: 'Kashmir Saffron',
+      category: 'Herbal & Ayurvedic',
+      image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600&h=600&fit=crop',
+      price: 'FOB $12-24/g',
+      link: '/products/herbal-ayurvedic/saffron',
+      badge: 'GI Certified'
     },
   ];
 

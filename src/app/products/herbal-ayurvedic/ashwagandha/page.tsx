@@ -2,52 +2,55 @@ import type { Metadata } from 'next';
 import ProductDetail from '@/components/ProductDetail';
 
 export const metadata: Metadata = {
-  title: 'Organic Ashwagandha Root Powder - Premium Ayurvedic Herb | The Export Express',
-  description: 'Premium organic Ashwagandha (Withania somnifera) root powder from India. Lab-tested, certified organic, with high withanolide content for export.',
-  keywords: 'ashwagandha export, organic ashwagandha, withania somnifera, ashwagandha powder, ayurvedic herbs export',
+  title: 'Ashwagandha Root Extract - 5-10% Withanolides | The Export Express',
+  description: 'Premium Ashwagandha (Withania somnifera) standardized extract 5-10% withanolides. GMP certified, USDA Organic. FOB $45-80/kg. Capsules, powder, tincture. Stress-relief, immunity booster.',
+  keywords: 'ashwagandha export, withanolides extract, withania somnifera, standardized ashwagandha, organic ashwagandha, adaptogen export, ayurvedic herbs, GMP certified',
 };
 
 export default function AshwagandhaProductPage() {
   return (
     <ProductDetail
-      title="Organic Ashwagandha Root Powder"
+      title="Ashwagandha Root Extract (Withania somnifera)"
       category="Herbal & Ayurvedic"
       heroImage="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&h=800&fit=crop"
       images={[
-        { url: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&h=800&fit=crop", alt: "Ashwagandha powder close-up" },
+        { url: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&h=800&fit=crop", alt: "Ashwagandha extract powder" },
         { url: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&h=800&fit=crop", alt: "Ashwagandha roots" },
-        { url: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&h=800&fit=crop", alt: "Ashwagandha packaging" },
+        { url: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&h=800&fit=crop", alt: "Ashwagandha capsules" },
       ]}
-      shortDescription="Premium organic Ashwagandha (Withania somnifera) root powder sourced from certified organic farms in India. Known as 'Indian Ginseng,' this adaptogenic herb is standardized to contain minimum 5% withanolides for maximum potency."
+      shortDescription="Premium Ashwagandha (Withania somnifera) standardized root extract with 5-10% withanolides. Sourced from certified organic farms in Kadi-Gujarat, Madhya Pradesh, and Rajasthan. Powerful adaptogen for stress-relief, immunity boost, and sleep support. GMP certified, AYUSH-GMP compliant."
       detailedDescription={[
-        "Ashwagandha, scientifically known as Withania somnifera, is one of the most revered herbs in Ayurvedic medicine with a history spanning over 3,000 years. Often called 'Indian Ginseng' or 'Winter Cherry,' this powerful adaptogenic herb has gained global recognition for its ability to help the body manage stress, enhance vitality, and support overall wellness. Our premium Ashwagandha root powder is sourced exclusively from certified organic farms in Rajasthan and Madhya Pradesh, regions known for producing the highest quality Ashwagandha with optimal withanolide content.",
-        "Our processing facility employs advanced low-temperature drying and milling techniques that preserve the herb's bioactive compounds, particularly withanolides, which are responsible for Ashwagandha's therapeutic properties. Each batch undergoes rigorous third-party laboratory testing to verify withanolide content (minimum 5%), ensure absence of heavy metals, pesticide residues, and microbial contamination. We maintain complete traceability from farm to final product, with comprehensive documentation including organic certificates, test reports, and phytosanitary certificates.",
-        "Ideal for nutraceutical manufacturers, supplement brands, herbal tea producers, and cosmetic companies, our Ashwagandha powder is available in various mesh sizes (60 mesh, 80 mesh, 100 mesh) to suit different applications. We offer flexible packaging options from bulk 25kg bags to retail-ready pouches, with private labeling services available. Our competitive pricing, consistent quality, and reliable supply chain make us the preferred partner for businesses seeking premium Ashwagandha for international markets."
+        "Ashwagandha (Withania somnifera) is a cornerstone of Ayurvedic medicine, commanding FOB prices of $45-80/kg for standardized extracts. The global adaptogen market exceeds $4 billion (2024) with 12% CAGR through 2029, driven by demand for stress-relief and immunity-boosting supplements. We source raw roots from APEDA-registered growers in Kadi-Gujarat, Madhya Pradesh, and Rajasthan, harvested October-February when withanolide content peaks. Roots are shade-dried below 40°C to preserve actives, then stored in climate-controlled warehouses (<25°C, ≤60% RH).",
+        "Our GMP-certified contract manufacturers employ water-alcohol (50-70% ethanol) extraction or supercritical CO₂ for solvent-free processing. Spray-drying produces standardized extracts with 5-10% withanolides verified by HPLC. Each batch undergoes comprehensive testing: withanolide content, heavy metals (<10ppm), pesticide residues (below FSSAI/EU MRL), and microbial load. We provide complete documentation: Certificate of Analysis (CoA), Certificate of Origin, Phytosanitary Certificate, and optional organic/halal certifications. Processing takes 2-3 weeks from raw root to finished product.",
+        "Target markets include USA (35%), EU (25%), Canada (8%), Middle East (7%), and Japan/South Korea (5%). Available formats: standardized powder (10% w/w), capsules (500mg gelatin or vegan HPMC), and liquid tinctures (alcohol or glycerin-based). We offer private-label contract packaging with 30-60 capsule bottles. MOQ varies by format. Premium certifications (Organic, Halal) add 20-40% to pricing. Ideal for dietary supplement brands, functional food manufacturers, and wellness product developers seeking clean-label, clinically-backed adaptogens."
       ]}
       specifications={[
         { label: "Botanical Name", value: "Withania somnifera" },
-        { label: "Part Used", value: "Root" },
-        { label: "Withanolide Content", value: "Minimum 5%" },
-        { label: "Mesh Size", value: "60 / 80 / 100 mesh" },
-        { label: "Moisture Content", value: "Maximum 10%" },
+        { label: "Part Used", value: "Root (harvested Oct-Feb)" },
+        { label: "Extraction Method", value: "Water-alcohol / Supercritical CO₂" },
+        { label: "Withanolide Content", value: "5-10% (HPLC verified)" },
+        { label: "Drying Method", value: "Spray-dry / Freeze-dry" },
+        { label: "Moisture Content", value: "≤10%" },
+        { label: "Heavy Metals", value: "<10 ppm" },
+        { label: "Pesticide Residues", value: "Below FSSAI/EU MRL" },
         { label: "Color", value: "Light brown to beige" },
-        { label: "Taste", value: "Bitter, earthy" },
-        { label: "Shelf Life", value: "24 months" },
+        { label: "Shelf Life", value: "24-36 months (dry extract)" },
+        { label: "FOB Pricing", value: "$45-80/kg (extract)" },
       ]}
-      origin="Rajasthan & Madhya Pradesh, India"
-      form="Fine Powder"
+      origin="Kadi-Gujarat, Madhya Pradesh, Rajasthan, India"
+      form="Standardized Extract (5-10% withanolides)"
       quantityOptions={[
-        "1 kg",
-        "5 kg",
-        "10 kg",
-        "25 kg",
-        "50 kg",
-        "100 kg+",
+        "Standardized powder (10% w/w)",
+        "Capsules 500mg (30-60 count)",
+        "Liquid tincture (alcohol/glycerin)",
+        "Bulk 10-50 kg bags",
+        "Custom formulations",
       ]}
       certifications={[
-        "USDA Organic",
+        "GMP (FSSAI + AYUSH-GMP)",
+        "ISO 9001 / ISO 22000",
+        "USDA Organic (NPOP)",
         "EU Organic",
-        "India Organic",
         "ISO 22000",
         "Kosher",
         "Halal",
@@ -55,16 +58,16 @@ export default function AshwagandhaProductPage() {
       hsCode="1211.90"
       exportInfo={{
         markets: [
-          "United States",
-          "European Union",
-          "Canada",
+          "USA (35%)",
+          "EU (25%)",
+          "Canada (8%)",
+          "UAE & Saudi Arabia (7%)",
+          "Japan & South Korea (5%)",
           "Australia",
-          "Japan",
-          "South Korea",
         ],
-        packaging: "25kg HDPE bags or custom packaging",
-        moq: "100 kg",
-        leadTime: "15-20 days",
+        packaging: "HDPE/PP bottles (15-30ml) for tinctures, PET jars (50-100g) for powder, PVC/Alu-Alu blister packs for capsules (30-60pcs). Recyclable carton boxes with tamper-evident seals.",
+        moq: "Varies by format - contact for details",
+        leadTime: "2-3 weeks processing + 30-45 days sea freight (USA), 5-7 days air freight",
       }}
       downloads={{
         specSheet: "/downloads/ashwagandha-spec-sheet.pdf",
@@ -72,24 +75,24 @@ export default function AshwagandhaProductPage() {
       }}
       relatedProducts={[
         {
-          name: "Organic Turmeric Powder",
-          image: "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=400&h=400&fit=crop",
-          link: "/products/herbal-ayurvedic/turmeric",
-        },
-        {
-          name: "Brahmi Powder",
-          image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=400&h=400&fit=crop",
-          link: "/products/herbal-ayurvedic/brahmi",
-        },
-        {
-          name: "Moringa Leaf Powder",
-          image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=400&h=400&fit=crop",
-          link: "/products/herbal-ayurvedic/moringa",
+          name: "Curcumin Extract (95%)",
+          image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&h=400&fit=crop",
+          link: "/products/herbal-ayurvedic/curcumin-extract",
         },
         {
           name: "Triphala Powder",
           image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=400&h=400&fit=crop",
           link: "/products/herbal-ayurvedic/triphala",
+        },
+        {
+          name: "Neem Oil",
+          image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=400&h=400&fit=crop",
+          link: "/products/herbal-ayurvedic/neem-oil",
+        },
+        {
+          name: "Kashmir Saffron",
+          image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=400&h=400&fit=crop",
+          link: "/products/herbal-ayurvedic/saffron",
         },
       ]}
     />
