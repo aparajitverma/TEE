@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import { 
   ArrowLeft, 
@@ -43,6 +43,8 @@ export default function EditBlogPostPage() {
   const [isSaving, setIsSaving] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [showPreview, setShowPreview] = useState(false);
+  const [isUploadingImage, setIsUploadingImage] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [formData, setFormData] = useState<BlogFormData>({
     title: '',
     slug: '',
@@ -72,28 +74,36 @@ export default function EditBlogPostPage() {
 
   const loadBlogPost = async () => {
     try {
-      // TODO: Replace with actual API call
-      // const response = await fetch(`/api/blog/${params.id}`);
-      // const data = await response.json();
+      const response = await fetch(`/api/website/blog/${params.id}`);
       
-      // Mock data for demonstration
-      await new Promise(resolve => setTimeout(resolve, 500));
+      if (!response.ok) {
+        if (response.status === 404) {
+          alert('Blog post not found');
+          router.push('/admin/website/blog');
+          return;
+        }
+        throw new Error('Failed to load blog post');
+      }
       
+      const data = await response.json();
+      const post = data.post;
+      
+      // Convert API data to form format
       setFormData({
-        title: 'Sample Blog Post',
-        slug: 'sample-blog-post',
-        category: 'export-tips',
-        tags: ['export', 'tips'],
-        author: 'Admin',
-        featuredImage: '',
-        excerpt: 'This is a sample blog post excerpt',
-        content: 'Sample blog content...',
-        metaTitle: 'Sample Blog Post - Export Tips',
-        metaDescription: 'Learn about export tips and best practices in this comprehensive guide.',
-        focusKeyword: 'export tips',
-        status: 'draft',
-        publishDate: new Date().toISOString().split('T')[0],
-        publishTime: '09:00',
+        title: post.title || '',
+        slug: post.slug || '',
+        category: post.category || '',
+        tags: post.tags || [],
+        author: post.author || 'Admin',
+        featuredImage: post.featuredImage || '',
+        excerpt: post.excerpt || '',
+        content: post.content || '',
+        metaTitle: post.metaTitle || post.title || '',
+        metaDescription: post.metaDescription || post.excerpt || '',
+        focusKeyword: post.keywords?.[0] || '',
+        status: post.status || 'draft',
+        publishDate: post.publishedDate ? new Date(post.publishedDate).toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
+        publishTime: post.publishedDate ? new Date(post.publishedDate).toTimeString().slice(0, 5) : '09:00',
       });
       
       setIsLoading(false);
@@ -150,21 +160,175 @@ export default function EditBlogPostPage() {
 
   const seoAnalysis = calculateSeoScore();
 
+  // Handle formatting insertion
+  const insertFormatting = (before: string, after: string, placeholder: string) => {
+    const textarea = textareaRef.current;
+    if (!textarea) return;
+
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const selectedText = formData.content.substring(start, end);
+    
+    let newText;
+    if (selectedText) {
+      // Wrap selected text
+      newText = before + selectedText + after;
+    } else {
+      // Insert placeholder
+      newText = before + placeholder + after;
+    }
+
+    const newContent = 
+      formData.content.substring(0, start) + 
+      newText + 
+      formData.content.substring(end);
+
+    updateFormData({ content: newContent });
+
+    // Set cursor position
+    setTimeout(() => {
+      const newPosition = selectedText 
+        ? start + before.length + selectedText.length + after.length
+        : start + before.length + placeholder.length;
+      textarea.setSelectionRange(newPosition, newPosition);
+      textarea.focus();
+    }, 0);
+  };
+
+  // Handle keyboard shortcuts
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.ctrlKey || event.metaKey) {
+      switch (event.key) {
+        case 'b':
+          event.preventDefault();
+          insertFormatting('**', '**', 'Bold text');
+          break;
+        case 'i':
+          event.preventDefault();
+          insertFormatting('*', '*', 'Italic text');
+          break;
+        case 'k':
+          event.preventDefault();
+          insertFormatting('[', '](url)', 'Link text');
+          break;
+      }
+    }
+  };
+
+  // Handle image paste
+  const handlePaste = async (event: React.ClipboardEvent<HTMLTextAreaElement>) => {
+    const items = event.clipboardData?.items;
+    if (!items) return;
+
+    // Look for image in clipboard
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      if (item.type.startsWith('image/')) {
+        event.preventDefault();
+        
+        const file = item.getAsFile();
+        if (!file) continue;
+
+        setIsUploadingImage(true);
+        
+        try {
+          const uploadFormData = new FormData();
+          uploadFormData.append('image', file);
+
+          const response = await fetch('/api/website/blog/images', {
+            method: 'POST',
+            body: uploadFormData,
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            // Insert image markdown at cursor position
+            const textarea = textareaRef.current;
+            const imageMarkdown = `![Pasted Image](${data.url})`;
+            
+            if (textarea) {
+              const start = textarea.selectionStart || 0;
+              const end = textarea.selectionEnd || 0;
+              
+              const newContent = 
+                formData.content.substring(0, start) + 
+                imageMarkdown + 
+                formData.content.substring(end);
+              
+              updateFormData({ content: newContent });
+              
+              // Set cursor after inserted text
+              setTimeout(() => {
+                const newPosition = start + imageMarkdown.length;
+                textarea.setSelectionRange(newPosition, newPosition);
+                textarea.focus();
+              }, 0);
+            } else {
+              // Fallback: append to end of content
+              const newContent = formData.content + '\n' + imageMarkdown;
+              updateFormData({ content: newContent });
+            }
+          } else {
+            alert('Failed to upload image: ' + data.error);
+          }
+        } catch (error) {
+          console.error('Upload error:', error);
+          alert('Failed to upload image');
+        } finally {
+          setIsUploadingImage(false);
+        }
+        
+        break;
+      }
+    }
+  };
+
   const handleSave = async (publishStatus: 'draft' | 'published' | 'scheduled') => {
     setIsSaving(true);
     try {
+      // Validate required fields
+      if (!formData.title.trim()) {
+        alert('Please enter a title');
+        setIsSaving(false);
+        return;
+      }
+      if (!formData.content.trim()) {
+        alert('Please enter some content');
+        setIsSaving(false);
+        return;
+      }
+      if (!formData.category) {
+        alert('Please select a category');
+        setIsSaving(false);
+        return;
+      }
+
       const payload = {
         ...formData,
         status: publishStatus,
+        tags: formData.tags.length > 0 ? formData.tags : [],
+        scheduledDate: publishStatus === 'scheduled' 
+          ? `${formData.publishDate}T${formData.publishTime}:00.000Z`
+          : null,
       };
 
-      // TODO: Replace with actual API call
-      console.log('Updating blog post:', payload);
-      
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      alert(`Blog post updated as ${publishStatus}!`);
-      router.push('/admin/website?tab=blog');
+      const response = await fetch(`/api/website/blog/${params.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(`Blog post ${publishStatus === 'published' ? 'published' : 'updated as ' + publishStatus} successfully!`);
+        router.push('/admin/website/blog');
+      } else {
+        alert('Failed to update blog post: ' + (data.error || 'Unknown error'));
+      }
     } catch (error) {
       console.error('Error updating blog post:', error);
       alert('Failed to update blog post');
@@ -293,14 +457,128 @@ export default function EditBlogPostPage() {
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Content
+                    {isUploadingImage && (
+                      <span className="ml-2 text-purple-400 text-sm">
+                        📤 Uploading pasted image...
+                      </span>
+                    )}
                   </label>
-                  <textarea
-                    value={formData.content}
-                    onChange={(e) => updateFormData({ content: e.target.value })}
-                    rows={12}
-                    className="w-full px-4 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-purple-500 font-mono text-sm"
-                    placeholder="Write your blog content here..."
-                  />
+                  <div className="border border-gray-700 rounded-lg overflow-hidden">
+                    {/* Rich Text Toolbar */}
+                    <div className="bg-gray-800 border-b border-gray-700 p-2 flex items-center gap-2 flex-wrap">
+                      <button
+                        type="button"
+                        onClick={() => insertFormatting('**', '**', 'Bold text')}
+                        className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm font-bold"
+                        title="Bold (Ctrl+B)"
+                      >
+                        B
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => insertFormatting('*', '*', 'Italic text')}
+                        className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm italic"
+                        title="Italic (Ctrl+I)"
+                      >
+                        I
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => insertFormatting('# ', '', 'Heading 1')}
+                        className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm"
+                        title="Heading 1"
+                      >
+                        H1
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => insertFormatting('## ', '', 'Heading 2')}
+                        className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm"
+                        title="Heading 2"
+                      >
+                        H2
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => insertFormatting('### ', '', 'Heading 3')}
+                        className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm"
+                        title="Heading 3"
+                      >
+                        H3
+                      </button>
+                      <div className="w-px h-6 bg-gray-600"></div>
+                      <button
+                        type="button"
+                        onClick={() => insertFormatting('- ', '', 'List item')}
+                        className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm"
+                        title="Bullet List"
+                      >
+                        • List
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => insertFormatting('1. ', '', 'Numbered item')}
+                        className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm"
+                        title="Numbered List"
+                      >
+                        1. List
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => insertFormatting('> ', '', 'Quote text')}
+                        className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm"
+                        title="Quote"
+                      >
+                        Quote
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => insertFormatting('`', '`', 'code')}
+                        className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm font-mono"
+                        title="Inline Code"
+                      >
+                        Code
+                      </button>
+                      <div className="w-px h-6 bg-gray-600"></div>
+                      <button
+                        type="button"
+                        onClick={() => insertFormatting('[', '](url)', 'Link text')}
+                        className="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition-colors text-sm"
+                        title="Link"
+                      >
+                        🔗 Link
+                      </button>
+                      <div className="ml-auto text-xs text-gray-400">
+                        💡 Paste images directly (Ctrl+V) to upload
+                      </div>
+                    </div>
+                    
+                    {/* Rich Text Editor */}
+                    <textarea
+                      ref={textareaRef}
+                      value={formData.content}
+                      onChange={(e) => updateFormData({ content: e.target.value })}
+                      onPaste={handlePaste}
+                      onKeyDown={handleKeyDown}
+                      rows={15}
+                      className="w-full px-4 py-3 bg-gray-900 text-white focus:outline-none resize-none border-0"
+                      placeholder="Write your blog content here using Markdown formatting...
+
+Examples:
+**Bold text** or *italic text*
+# Large Heading
+## Medium Heading  
+### Small Heading
+- Bullet point
+1. Numbered list
+> Quote block
+`inline code`
+[Link text](https://example.com)
+
+You can also paste images directly!"
+                      style={{ fontFamily: 'ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace' }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

@@ -789,13 +789,22 @@ model BlogPost {
   tags            String?  // JSON array
   
   // Publishing
-  status          String   @default("Draft") // Draft, Published, Scheduled, Archived
+  status          String   @default("draft") // draft, published, scheduled, archived
   publishedDate   DateTime? @map("published_date")
   scheduledDate   DateTime? @map("scheduled_date")
   
   // SEO
   metaTitle       String?  @map("meta_title")
   metaDescription String?  @map("meta_description")
+  keywords        String?  // JSON array of SEO keywords
+  
+  // Additional Fields for Blog Management
+  authorEmail     String?  @map("author_email")
+  readTime        String?  @map("read_time")
+  images          String?  // JSON array of image URLs
+  websitePostId   String?  @map("website_post_id")
+  syncStatus      String   @default("not_synced") @map("sync_status") // synced, pending, failed, not_synced
+  lastSynced      DateTime? @map("last_synced")
   
   // Analytics
   viewsCount      Int      @default(0) @map("views_count")
@@ -868,5 +877,18 @@ model MediaLibrary {
   tags        String?  // JSON array
   
   @@map("media_library")
+}
+
+
+model BlogCategory {
+  id           Int      @id @default(autoincrement())
+  name         String   @unique
+  slug         String   @unique
+  description  String?
+  postCount    Int      @default(0) @map("post_count")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  @@map("blog_categories")
 }
 

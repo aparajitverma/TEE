@@ -16,6 +16,8 @@ import {
   BookOpen,
   Loader2,
   Package,
+  AlertTriangle,
+  TestTube,
 } from 'lucide-react';
 
 interface BlogPost {
@@ -70,6 +72,14 @@ export default function BlogManagementPage() {
       const response = await fetch(`/api/website/blog?${params}`);
       const data = await response.json();
 
+      console.log('Blog API Response:', data);
+      console.log('Posts received:', data.posts?.length || 0);
+      console.log('Debug info:', data.debug);
+      if (data.posts?.length > 0) {
+        console.log('First post:', data.posts[0]);
+        console.log('Post IDs:', data.posts.map((p: any) => p.id));
+      }
+
       setPosts(data.posts || []);
       setTotalPages(data.pagination?.totalPages || 1);
     } catch (error) {
@@ -101,6 +111,56 @@ export default function BlogManagementPage() {
     } catch (error) {
       console.error('Error importing posts:', error);
       alert('Failed to import posts');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleClear = async () => {
+    if (!confirm('Clear all blog posts and categories? This action cannot be undone!')) {
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const response = await fetch('/api/website/blog/clear', {
+        method: 'POST',
+      });
+
+      const data = await response.json();
+      
+      if (response.ok) {
+        alert('All blog posts and categories cleared successfully!');
+        loadPosts();
+      } else {
+        alert('Clear failed: ' + data.error);
+      }
+    } catch (error) {
+      console.error('Error clearing posts:', error);
+      alert('Failed to clear posts');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleCreateTest = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch('/api/website/blog/test', {
+        method: 'POST',
+      });
+
+      const data = await response.json();
+      
+      if (response.ok) {
+        alert(`Test post created! Total posts: ${data.totalPosts}`);
+        loadPosts();
+      } else {
+        alert('Test creation failed: ' + data.error);
+      }
+    } catch (error) {
+      console.error('Error creating test post:', error);
+      alert('Failed to create test post');
     } finally {
       setLoading(false);
     }
@@ -170,6 +230,30 @@ export default function BlogManagementPage() {
             </div>
           </div>
           <div className="flex items-center gap-3">
+            <button
+              onClick={handleCreateTest}
+              disabled={loading}
+              className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors disabled:opacity-50"
+            >
+              {loading ? (
+                <Loader2 className="w-5 h-5 animate-spin" />
+              ) : (
+                <TestTube className="w-5 h-5" />
+              )}
+              Create Test Post
+            </button>
+            <button
+              onClick={handleClear}
+              disabled={loading}
+              className="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors disabled:opacity-50"
+            >
+              {loading ? (
+                <Loader2 className="w-5 h-5 animate-spin" />
+              ) : (
+                <AlertTriangle className="w-5 h-5" />
+              )}
+              Clear All
+            </button>
             <button
               onClick={handleImport}
               disabled={loading}
@@ -288,11 +372,17 @@ export default function BlogManagementPage() {
                       <tr key={post.id} className="hover:bg-gray-750 transition-colors">
                         <td className="px-4 py-3">
                           <div className="flex items-center gap-3">
-                            <img
-                              src={post.featuredImage || '/placeholder-blog.png'}
-                              alt={post.title}
-                              className="w-16 h-16 object-cover rounded"
-                            />
+                            {post.featuredImage ? (
+                              <img
+                                src={post.featuredImage}
+                                alt={post.title}
+                                className="w-16 h-16 object-cover rounded"
+                              />
+                            ) : (
+                              <div className="w-16 h-16 bg-gray-700 rounded flex items-center justify-center">
+                                <BookOpen className="w-8 h-8 text-gray-500" />
+                              </div>
+                            )}
                             <div className="max-w-md">
                               <div className="font-medium text-white line-clamp-1">{post.title}</div>
                               <div className="text-xs text-gray-400 line-clamp-1">{post.excerpt}</div>
